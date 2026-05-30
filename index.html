@@ -10,32 +10,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════════════════
-   EMERALD LUXE ENTERPRISE — FLEXOTE IT SOLUTIONS
-   Palette: Deep Emerald · Champagne Gold · Ivory Cream
-   Typography: Playfair Display + Lato
-════════════════════════════════════════════════════ */
 :root {
-  --em:       #0d4f3c;   /* deep emerald */
-  --em2:      #186a52;   /* mid emerald */
-  --em3:      #1e8a6a;   /* light emerald */
-  --em-pale:  #e9f4f0;   /* pale emerald tint */
-  --em-soft:  #c8e6dd;   /* soft emerald */
+  --em:       #0d4f3c;   
+  --em2:      #186a52;  
+  --em3:      #1e8a6a;   
+  --em-pale:  #e9f4f0;   
+  --em-soft:  #c8e6dd;  
   --em-pale-err:#e1072e30; 
   --em-soft-err:#ff1212;
   --em-err:   #e1072e;  
-  --gold:     #b8860b;   /* dark gold */
-  --gold2:    #d4a017;   /* mid gold */
-  --gold3:    #f0c040;   /* bright gold */
-  --gold-pale:#fdf4d8;   /* pale gold */
-  --ivory:    #fafaf7;   /* ivory white */
-  --cream:    #f4f1eb;   /* warm cream */
-  --paper:    #efefea;   /* paper bg */
-  --ink:      #1a1a16;   /* near black */
-  --ink2:     #3d3d35;   /* dark grey */
-  --ink3:     #6b6b60;   /* mid grey */
-  --ink4:     #9a9a8e;   /* muted */
-  --border:   #ddddd4;   /* subtle border */
+  --gold:     #b8860b;  
+  --gold2:    #d4a017;  
+  --gold3:    #f0c040;  
+  --gold-pale:#fdf4d8;  
+  --ivory:    #fafaf7;  
+  --cream:    #f4f1eb;  
+  --paper:    #efefea;  
+  --ink:      #1a1a16;  
+  --ink2:     #3d3d35;  
+  --ink3:     #6b6b60;  
+  --ink4:     #9a9a8e;  
+  --border:   #ddddd4;  
   --shadow-s: 0 2px 12px rgba(13,79,60,.07);
   --shadow-m: 0 6px 28px rgba(13, 79, 60, 0.199);
   --shadow-l: 0 16px 52px rgba(13, 79, 60, 0.337);
@@ -53,12 +48,10 @@ ul{list-style:none;}
 img{max-width:100%;display:block;}
 button{cursor:pointer;font-family:var(--fb);border:none;outline:none;}
 
-/* PAGE SYSTEM */
 .page{display:none;animation:pgIn .38s ease;}
 .page.active{display:block;}
 @keyframes pgIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
 
-/* ══════════ TOPBAR ══════════ */
 .topbar{background:var(--em);padding:8px 0;font-size:12.5px;}
 .topbar-inner{max-width:1200px;margin:0 auto;padding:0 22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
 .topbar-msg{color:rgba(255,255,255,.75);letter-spacing:.3px;}
@@ -70,11 +63,9 @@ button{cursor:pointer;font-family:var(--fb);border:none;outline:none;}
 .topbar-icons a{width:22px;height:22px;border:1px solid rgba(255,255,255,.22);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;transition:all var(--t);}
 .topbar-icons a:hover{background:var(--gold2);border-color:var(--gold2);color:var(--em);}
 
-/* ══════════ HEADER ══════════ */
 header{background:var(--ivory);border-bottom:2px solid var(--em-soft);position:sticky;top:0;z-index:999;box-shadow:var(--shadow-s);}
 .header-inner{max-width:1200px;margin:0 auto;padding:0 22px;display:flex;align-items:center;justify-content:space-between;height:70px;}
 
-/* LOGO */
 .logo{display:flex;align-items:center;gap:12px;cursor:pointer;}
 .logo-emblem{width:48px;height:48px;background:var(--em);border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 .logo-emblem::before{content:'';position:absolute;top:-6px;right:-6px;width:26px;height:26px;border-radius:50%;background:var(--gold2);opacity:.35;}
@@ -84,7 +75,6 @@ header{background:var(--ivory);border-bottom:2px solid var(--em-soft);position:s
 .logo-name em{color:var(--gold);font-style:normal;}
 .logo-tagline{font-size:9.5px;color:var(--ink4);text-transform:uppercase;letter-spacing:2px;}
 
-/* NAV */
 .main-nav{display:flex;align-items:center;gap:2px;}
 .nav-item{position:relative;}
 .nav-link{padding:8px 12px;display:flex;align-items:center;gap:4px;font-size:14.5px;font-weight:700;color:var(--ink2);border-radius:5px;transition:all var(--t);cursor:pointer;white-space:nowrap;letter-spacing:.4px;}
@@ -101,10 +91,8 @@ header{background:var(--ivory);border-bottom:2px solid var(--em-soft);position:s
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px;}
 .hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all var(--t);}
 
-/* ══════════ CONTAINER ══════════ */
 .W{max-width:1200px;margin:0 auto;padding:0 22px;}
 
-/* ══════════ BUTTONS ══════════ */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:5px;font-size:14px;font-weight:700;transition:all var(--t);cursor:pointer;letter-spacing:.3px;}
 .btn-em{background:var(--em);color:#fff;}
 .btn-em:hover{background:var(--em2);transform:translateY(-2px);box-shadow:0 6px 22px rgba(13,79,60,.28);}
@@ -117,7 +105,6 @@ header{background:var(--ivory);border-bottom:2px solid var(--em-soft);position:s
 .btn-white{background:#fff;color:var(--em);font-weight:700;}
 .btn-white:hover{background:var(--gold-pale);transform:translateY(-1px);}
 
-/* ══════════ SECTION COMMONS ══════════ */
 section{padding:76px 0;}
 .sec-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--gold);margin-bottom:10px;}
 .sec-eyebrow::before,.sec-eyebrow::after{content:'—';color:var(--gold3);}
@@ -129,7 +116,6 @@ section{padding:76px 0;}
 .rule{width:56px;height:3px;background:linear-gradient(90deg,var(--em),var(--gold2));border-radius:2px;margin:14px 0;}
 .rule-c{margin:14px auto;}
 
-/* ══════════ HOME · HERO ══════════ */
 .hero{background:var(--ivory);position:relative;overflow:hidden;min-height:520px;}
 .hero-weave{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d4f3c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none;}
 .hero-orb{position:absolute;right:-150px;top:-100px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(13,79,60,.07) 0%,transparent 65%);pointer-events:none;}
@@ -157,7 +143,6 @@ section{padding:76px 0;}
 .hstat-n sup{font-size:18px;vertical-align:top;margin-top:6px;}
 .hstat-l{font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1.2px;margin-top:2px;}
 
-/* ══════════ HOME · PROCESS ══════════ */
 .process-sec{background:var(--cream);}
 .process-trio{display:grid;grid-template-columns:repeat(3,1fr);}
 .proc-item{padding:38px 32px;border-right:1px solid var(--border);transition:background var(--t);display:flex;gap:18px;}
@@ -171,7 +156,6 @@ section{padding:76px 0;}
 .proc-text a{color:var(--em);font-size:13px;font-weight:700;margin-top:8px;display:inline-block;transition:color var(--t);}
 .proc-text a:hover{color:var(--gold);}
 
-/* ══════════ CARD GRID ══════════ */
 .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
 .cards2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
 .svc-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:28px;transition:all var(--t);position:relative;overflow:hidden;}
@@ -186,7 +170,6 @@ section{padding:76px 0;}
 .rd-link{display:inline-flex;align-items:center;gap:5px;color:var(--em);font-size:13px;font-weight:700;margin-top:14px;transition:all var(--t);}
 .rd-link:hover{color:var(--gold);gap:8px;}
 
-/* ══════════ COURSE CARDS ══════════ */
 .course-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:24px;display:flex;gap:18px;transition:all var(--t);}
 .course-card:hover{border-color:var(--em-soft);box-shadow:var(--shadow-m);}
 .c-num{font-family:var(--fh);font-size:42px;color:var(--border);line-height:1;min-width:50px;transition:color var(--t);}
@@ -197,7 +180,6 @@ section{padding:76px 0;}
 .c-body p{font-size:13.5px;color:var(--ink3);line-height:1.65;}
 .c-badge{display:inline-flex;align-items:center;gap:5px;background:var(--em-pale);color:var(--em);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;margin-top:10px;}
 
-/* ══════════ PORTFOLIO CARDS ══════════ */
 .port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .port-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all var(--t);}
 .port-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-l);border-color:var(--em-soft);}
@@ -212,7 +194,6 @@ section{padding:76px 0;}
 .port-tags{display:flex;flex-wrap:wrap;gap:6px;}
 .ptag{background:var(--em-pale);color:var(--em);font-size:11px;padding:3px 10px;border-radius:20px;font-weight:700;}
 
-/* ══════════ TESTIMONIALS ══════════ */
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
 .testi-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:30px;position:relative;overflow:hidden;}
 .testi-card::before{content:'\201C';font-family:var(--fh);font-size:100px;color:var(--em-pale);position:absolute;top:5px;right:18px;line-height:1;}
@@ -223,7 +204,6 @@ section{padding:76px 0;}
 .testi-name{font-weight:700;font-size:14px;color:var(--ink);}
 .testi-role{font-size:12px;color:var(--ink4);}
 
-/* ══════════ PARTNERS ══════════ */
 .partner-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
 .partner-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:28px;display:flex;gap:20px;transition:all var(--t);}
 .partner-card:hover{border-color:var(--em-soft);box-shadow:var(--shadow-m);}
@@ -233,14 +213,12 @@ section{padding:76px 0;}
 .partner-info a{color:var(--em);font-size:13px;font-weight:700;transition:color var(--t);}
 .partner-info a:hover{color:var(--gold);}
 
-/* ══════════ CLIENTS ══════════ */
 .client-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;}
 .client-cell{background:#fff;border:1px solid var(--border);border-radius:var(--r);height:68px;display:flex;align-items:center;justify-content:center;padding:8px;transition:all var(--t);}
 .client-cell:hover{border-color:var(--em);background:var(--em-pale);}
 .client-cell span{font-size:11px;text-align:center;color:var(--ink4);text-transform:uppercase;letter-spacing:.5px;font-weight:700;}
 .client-cell:hover span{color:var(--em);}
 
-/* ══════════ CTA STRIPS ══════════ */
 .cta-em{background:var(--em);padding:56px 0;}
 .cta-gold{background:linear-gradient(120deg,var(--gold),var(--gold2));padding:52px 0;}
 .cta-dark{background:var(--ink);padding:52px 0;}
@@ -249,24 +227,14 @@ section{padding:76px 0;}
 .cta-txt h2 em{font-style:italic;color:var(--gold3);}
 .cta-txt p{color:rgba(255,255,255,.72);font-size:15px;}
 
-/* ══════════ PAGE HERO (inner pages) ══════════ */
-/* Each page type has a unique hero treatment */
 .ph{position:relative;overflow:hidden;padding:54px 0;}
-/* About — emerald diagonal */
 .ph-about{background:linear-gradient(115deg,var(--em-dark,#0a3d2e) 0%,var(--em) 60%,var(--em2) 100%);}
-/* Services — gold-emerald blend */
 .ph-service{background:linear-gradient(115deg,var(--em) 0%,var(--em2) 55%,var(--gold,#b8860b) 160%);}
-/* Solutions — reverse diagonal */
 .ph-solution{background:linear-gradient(125deg,var(--em2) 0%,var(--em) 100%);}
-/* Courses — gold-accent */
 .ph-course{background:linear-gradient(115deg,var(--ink) 0%,var(--em) 100%);}
-/* Portfolio — elegant dark */
 .ph-portfolio{background:linear-gradient(115deg,var(--em) 0%,#052a1e 100%);}
-/* Hosting — gold-centric */
 .ph-hosting{background:linear-gradient(115deg,var(--gold) 0%,var(--em) 100%);}
-/* Contact — warm ink */
 .ph-contact{background:linear-gradient(115deg,var(--ink) 0%,var(--em) 100%);}
-/* Sitemap, misc — muted */
 .ph-misc{background:linear-gradient(115deg,var(--em2) 0%,var(--em) 100%);}
 .ph-pattern{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:30px 30px;}
 .ph-inner{position:relative;z-index:1;}
@@ -277,7 +245,6 @@ section{padding:76px 0;}
 .breadcrumb a:hover{color:var(--gold3);}
 .breadcrumb span{color:var(--gold3);}
 
-/* ══════════ ABOUT PAGE ══════════ */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
 .about-visual{background:linear-gradient(135deg,var(--em-pale),var(--em-soft));border-radius:var(--r);min-height:420px;display:flex;align-items:center;justify-content:center;font-size:90px;position:relative;overflow:hidden;}
 .about-visual::after{content:'';position:absolute;bottom:0;right:0;width:160px;height:160px;background:var(--gold-pale);border-radius:50% 0 0 0;opacity:.6;}
@@ -287,7 +254,6 @@ section{padding:76px 0;}
 .val-ico{width:34px;height:34px;background:var(--em-pale);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:15px;min-width:34px;}
 .val-item h4{font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:3px;}
 .val-item p{font-size:12.5px;color:var(--ink3);}
-/* Timeline */
 .timeline{display:flex;gap:0;margin-top:40px;overflow:hidden;border-radius:var(--r);border:1px solid var(--border);}
 .tl-item{flex:1;text-align:center;padding:20px 12px;background:#fff;border-right:1px solid var(--border);position:relative;}
 .tl-item:last-child{border-right:none;}
@@ -308,7 +274,6 @@ section{padding:76px 0;}
 .step-label{font-family:var(--fh);font-size:15px;color:var(--em);margin-bottom:4px;}
 .step-n{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);font-weight:700;}
 
-/* ══════════ CEO PAGE ══════════ */
 .ceo-grid{display:grid;grid-template-columns:1fr 2fr;gap:50px;align-items:start;}
 .ceo-photo{background:linear-gradient(135deg,var(--em-pale),var(--em-soft));border-radius:var(--r);min-height:380px;display:flex;align-items:center;justify-content:center;font-size:90px;position:sticky;top:90px;}
 .ceo-name{font-family:var(--fh);font-size:34px;color:var(--ink);margin-bottom:4px;}
@@ -322,7 +287,6 @@ section{padding:76px 0;}
 .soc-link{display:flex;align-items:center;gap:6px;background:var(--cream);border:1px solid var(--border);border-radius:5px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--ink2);transition:all var(--t);}
 .soc-link:hover{background:var(--em);color:#fff;border-color:var(--em);}
 
-/* ══════════ TEAM PAGE ══════════ */
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 .team-card{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;text-align:center;transition:all var(--t);}
 .team-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-l);}
@@ -335,7 +299,6 @@ section{padding:76px 0;}
 .team-soc a{width:28px;height:28px;border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;transition:all var(--t);}
 .team-soc a:hover{background:var(--em);color:#fff;border-color:var(--em);}
 
-/* ══════════ SERVICE INNER PAGE ══════════ */
 .service-inner{display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:start;}
 .service-content h2{font-family:var(--fh);font-size:30px;color:var(--ink);margin-bottom:14px;}
 .service-content p{font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;}
@@ -358,7 +321,6 @@ section{padding:76px 0;}
 .detail-card p:last-child{border-bottom:none;}
 .detail-card p strong{color:var(--em);font-weight:700;}
 
-/* ══════════ HOSTING PAGE ══════════ */
 .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .plan-card{background:#fff;border:2px solid var(--border);border-radius:var(--r);padding:32px;text-align:center;transition:all var(--t);position:relative;}
 .plan-card.featured{border-color:var(--em);box-shadow:var(--shadow-l);}
@@ -372,7 +334,6 @@ section{padding:76px 0;}
 .plan-feats li:last-child{border-bottom:none;}
 .plan-feats li::before{content:'✓';color:var(--em);font-weight:700;}
 
-/* ══════════ PORTFOLIO PAGE ══════════ */
 .port-detail-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:start;}
 .port-big{background:linear-gradient(135deg,var(--em-pale),var(--em-soft));border-radius:var(--r);min-height:340px;display:flex;align-items:center;justify-content:center;font-size:90px;}
 .port-meta{background:var(--cream);border-radius:var(--r);padding:22px;margin-top:20px;}
@@ -382,10 +343,8 @@ section{padding:76px 0;}
 .port-meta li strong{color:var(--ink);font-weight:700;}
 .port-meta li span{color:var(--ink3);}
 
-/* ══════════ TESTIMONIALS PAGES ══════════ */
 .testi-page-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
 
-/* ══════════ CONTACT PAGE ══════════ */
 .contact-grid{display:grid;grid-template-columns:1fr 1.45fr;gap:48px;align-items:start;}
 .contact-left h2{font-family:var(--fh);font-size:30px;color:var(--ink);margin-bottom:16px;}
 .contact-left p{font-size:15px;color:var(--ink3);line-height:1.8;margin-bottom:24px;}
@@ -408,7 +367,6 @@ section{padding:76px 0;}
 .form-ok{display:none;background:var(--em-pale);border:1px solid var(--em-soft);color:var(--em);padding:14px;border-radius:5px;font-weight:700;margin-top:12px;}
 .form-not-ok{display:none;background:var(--em-pale-err);border:1px solid var(--em-soft-err);color:var(--em-err);padding:14px;border-radius:5px;font-weight:700;margin-top:12px;}
 
-/* ══════════ SITEMAP ══════════ */
 .sitemap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
 .smap-col h3{font-family:var(--fh);font-size:18px;color:var(--ink);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--em);}
 .smap-col li{margin-bottom:8px;}
@@ -416,10 +374,8 @@ section{padding:76px 0;}
 .smap-col li a::before{content:'›';color:var(--gold2);}
 .smap-col li a:hover{color:var(--em);padding-left:4px;}
 
-/* ══════════ CLIENTS PAGE ══════════ */
 .clients-full-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;}
 
-/* ══════════ FOOTER ══════════ */
 footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:44px;margin-bottom:44px;}
 .f-brand p{font-size:13.5px;line-height:1.8;color:rgba(255,255,255,.55);margin:16px 0 20px;}
@@ -439,11 +395,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
 .footer-bar a{color:var(--gold3);}
 .footer-tag{color:rgba(255,255,255,.38);font-style:italic;font-family:var(--fc);font-size:14px;}
 
-/* ══════════ WHATSAPP FLOAT ══════════ */
 .wa-btn{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.45);z-index:998;font-size:26px;transition:transform var(--t);}
 .wa-btn:hover{transform:scale(1.12);}
 
-/* ══════════ RESPONSIVE ══════════ */
 @media(max-width:980px){
   .cards3,.testi-grid,.port-grid{grid-template-columns:repeat(2,1fr);}
   .footer-grid{grid-template-columns:1fr 1fr;}
@@ -484,7 +438,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
 </head>
 <body>
 
-<!-- TOPBAR -->
 <div class="topbar">
   <div class="topbar-inner">
     <div class="topbar-msg">✦ Welcome to <span>Flexote IT Solutions</span> — Build Your Business, Not Just a Website.</div>
@@ -502,7 +455,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </div>
 </div>
 
-<!-- HEADER -->
 <header>
   <div class="header-inner">
     <div class="logo" onclick="go('home')">
@@ -582,9 +534,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </div>
 </header>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ HOME PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page active" id="page-home">
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-weave"></div><div class="hero-orb"></div><div class="hero-orb2"></div>
     <div class="hero-slides">
@@ -626,7 +576,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
       </div>
     </div>
   </div>
-  <!-- STAT STRIP -->
   <div class="hero-stat-strip">
     <div class="W"><div class="hstats">
       <div class="hstat"><div class="hstat-n">50<sup>+</sup></div><div class="hstat-l">Projects Delivered</div></div>
@@ -636,7 +585,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     </div></div>
   </div>
 
-  <!-- PROCESS -->
   <section class="process-sec">
     <div class="W">
       <div class="sec-hdr" style="text-align:center;">
@@ -652,7 +600,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section style="background:#fff;">
     <div class="W">
       <div class="sec-hdr">
@@ -675,7 +622,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     </div>
   </section>
 
-  <!-- SOLUTIONS -->
   <section style="background:var(--cream);">
     <div class="W">
       <div class="sec-hdr">
@@ -698,7 +644,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     </div>
   </section>
 
-  <!-- COURSES -->
   <section style="background:#fff;">
     <div class="W">
       <div class="sec-hdr">
@@ -724,7 +669,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     </div>
   </section>
 
-  <!-- PORTFOLIO PREVIEW -->
   <section style="background:var(--cream);">
     <div class="W">
       <div class="sec-hdr">
@@ -746,7 +690,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
   <section style="background:#fff;">
     <div class="W">
       <div class="sec-hdr" style="text-align:center;">
@@ -762,7 +705,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     </div>
   </section>
 
-  <!-- PARTNERS -->
   <section style="background:var(--cream);">
     <div class="W">
       <div class="sec-hdr">
@@ -778,7 +720,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     </div>
   </section>
 
-  <!-- CLIENTS -->
   <section style="background:#fff;">
     <div class="W">
       <div class="sec-hdr" style="text-align:center;">
@@ -792,15 +733,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     </div>
   </section>
 
-  <!-- CTA -->
   <div class="cta-em"><div class="W"><div class="cta-row">
     <div class="cta-txt"><h2>We don't just talk about what is coming next, <em>we do it.</em></h2><p>Join hundreds of businesses and thousands of students who have grown with Flexote IT Solutions.</p></div>
     <button class="btn btn-white" onclick="go('contact');setCur(event, 8)">Join With Us →</button>
   </div></div></div>
 </div>
-<!-- /HOME -->
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ ABOUT PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-about">
   <div class="ph ph-about"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">About <em>Flexote IT Solutions</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <span>About Us</span></div></div></div>
   <section style="background:#fff;">
@@ -860,7 +798,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </div></div></div>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ TEAM PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-team">
   <div class="ph ph-misc"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">Our <em>Team</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <a href="#" onclick="go('about');return false;">About Us</a> › <span>Our Team</span></div></div></div>
   <section style="background:#fff;">
@@ -879,7 +816,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </section>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ CLIENTS PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-clients-pg">
   <div class="ph ph-misc"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">Our <em>Clients</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <a href="#" onclick="go('about');return false;">About Us</a> › <span>Our Clients</span></div></div></div>
   <section style="background:#fff;">
@@ -892,7 +828,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </section>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ PARTNERS PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-partners-pg">
   <div class="ph ph-misc"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">Our Brand <em>Partners</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <a href="#" onclick="go('about');return false;">About Us</a> › <span>Our Partners</span></div></div></div>
   <section style="background:#fff;">
@@ -908,7 +843,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </section>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ SITEMAP PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-sitemap">
   <div class="ph ph-misc"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">Website <em>Sitemap</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <span>Sitemap</span></div></div></div>
   <section style="background:#fff;">
@@ -923,7 +857,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </section>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ STUDENT TESTIMONIALS ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-stud-testi">
   <div class="ph ph-course"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">Students <em>Testimonials</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <span>Students Testimonials</span></div></div></div>
   <section style="background:#fff;">
@@ -941,7 +874,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </section>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ CLIENT TESTIMONIALS ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-client-testi">
   <div class="ph ph-about"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">Clients <em>Testimonials</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <span>Clients Testimonials</span></div></div></div>
   <section style="background:#fff;">
@@ -959,7 +891,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </section>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ PORTFOLIO PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-portfolio">
   <div class="ph ph-portfolio"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">Our <em>Portfolio</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <span>Portfolio</span></div></div></div>
   <section style="background:#fff;">
@@ -979,7 +910,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </section>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ HOSTING PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-hosting">
   <div class="ph ph-hosting"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">Web <em>Hosting Services</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <span>Hosting</span></div></div></div>
   <section style="background:#fff;">
@@ -994,7 +924,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </section>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ CONTACT PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-contact">
   <div class="ph ph-contact"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">Contact <em>Us</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <span>Contact Us</span></div></div></div>
   <section style="background:#fff;">
@@ -1028,7 +957,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </section>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ DYNAMIC INNER PAGE (Services / Solutions / Courses) ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-dynamic">
   <div class="ph" id="dyn-ph"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title" id="dyn-title">Page</h1><div class="breadcrumb" id="dyn-bc"></div></div></div>
   <section style="background:#fff;">
@@ -1066,7 +994,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </div></div></div>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ FOOTER ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <footer>
   <div class="W">
     <div class="footer-grid">
@@ -1123,12 +1050,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </div>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
 <a href="https://api.whatsapp.com/send?phone=918341377722" class="wa-btn" target="_blank" title="Chat on WhatsApp">💬</a>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ JAVASCRIPT ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <script>
-/* ── PAGE DATA ── */
 const D = {
   'web-designing':{ph:'ph-service',cat:'Services',icon:'🌐',title:'Website Designing Services',desc:'Flexote IT Solutions is a professional web design and development services company from Hyderabad offering business solutions around the world. We specialise in creating stunning, user-friendly websites that reflect your brand and convert visitors into customers.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Are you looking for the best website designing services in Hyderabad? We are a team of creative Web Designers &amp; Developers based in Hyderabad providing a wide range of Web Design Services which includes custom website design, landing page design, e-commerce design, corporate website design and much more.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">A professional website design can catch the attention of potential customers towards your business or service and a poor website design can keep potential customers away. We ensure every website we build is visually stunning, fast loading, mobile responsive, and optimised for search engines.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Our Web Designing Services Include</h3><ul class="feature-list"><li>Custom Website Design tailored to your brand identity</li><li>Responsive layouts for desktop, tablet, and mobile</li><li>UI/UX design focused on user engagement and conversion</li><li>Landing page design for marketing campaigns</li><li>E-commerce website design with product catalog</li><li>Corporate and business website design</li><li>Portfolio and showcase websites</li><li>CMS-based websites (WordPress, Joomla)</li></ul>`,meta:{Duration:'2–4 Weeks',Platform:'WordPress / Custom HTML',Devices:'Desktop · Tablet · Mobile',Support:'1 Year Free Maintenance'}},
   'web-development':{ph:'ph-service',cat:'Services',icon:'⚙️',title:'Website Development Services',desc:'Flexote brings cutting-edge technologies to your business for all your development needs. Our goal is your growth in the online market space through robust, scalable web solutions.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Our web development services combine technical excellence with deep business understanding. We build websites and web applications using the latest technologies including HTML5, CSS3, JavaScript, PHP, and modern CMS platforms that are built to last and scale with your business.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">All development work adheres to W3C Standards and the latest coding best practices, ensuring secure, maintainable, and high-performance web applications that serve your users and search engines alike.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Technologies We Work With</h3><ul class="feature-list"><li>HTML5, CSS3, JavaScript (ES6+) and jQuery</li><li>PHP 8 &amp; MySQL / MariaDB backend development</li><li>WordPress, Joomla, Drupal CMS platforms</li><li>Bootstrap 5 and Tailwind CSS front-end frameworks</li><li>REST API development and third-party integration</li><li>Payment gateway integration (PayPal, Razorpay)</li><li>E-commerce development with WooCommerce</li></ul>`,meta:{Duration:'3–8 Weeks',Stack:'PHP / WordPress / React',Testing:'Cross-browser &amp; Mobile',Support:'6 Months Free Support'}},
@@ -1162,7 +1086,6 @@ const D = {
   'smm-online':{ph:'ph-course',cat:'Courses',icon:'💻',title:'SMM Online Training',desc:'Online SMM training covering Facebook, LinkedIn, Twitter, YouTube, Pinterest and more — delivered by a leading social media marketing advisor.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">This Online Training on Social Media Marketing (SMM) is delivered by our lead trainer, a leading consultant and advisor in Social Media Marketing. This training covers the complete concepts of SMM as well as platforms like Facebook, Google+, LinkedIn, Twitter, YouTube, Pinterest and more.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Platforms and Topics</h3><ul class="feature-list"><li>Facebook organic strategy and Meta Ads</li><li>Instagram content, Reels and growth hacking</li><li>LinkedIn networking, B2B and lead generation</li><li>Twitter/X audience building and engagement</li><li>YouTube marketing and video SEO fundamentals</li><li>Pinterest visual marketing for brand growth</li><li>Canva and design basics for social media content</li><li>Social media analytics interpretation and reporting</li></ul>`,meta:{Duration:'6 Weeks',Mode:'Online (Live + Recorded)',Platforms:'7+ Social Networks',Batches:'Weekday + Weekend'}}
 };
 
-/* ── ROUTER ── */
 let cur = 'home';
 let pageSelected = sessionStorage.getItem('page')
 pageSelected ? go(pageSelected) : null
@@ -1181,7 +1104,6 @@ function go(id){
     ph.className='ph '+d.ph;
     document.getElementById('dyn-title').innerHTML=d.title;
     document.getElementById('dyn-bc').innerHTML=`<a href="#" onclick="go('home');return false;">Home</a> › <span>${d.cat}</span> › <span>${d.title}</span>`;
-    // Build meta sidebar
     let metaHtml='<h4>Quick Info</h4>';
     Object.entries(d.meta).forEach(([k,v])=>{metaHtml+=`<p><strong>${k}:</strong> ${v}</p>`;});
     document.getElementById('dyn-meta').innerHTML=metaHtml;
@@ -1229,12 +1151,10 @@ function setCur(e, op) {
   return;
 }
 
-/* ── HERO SLIDER ── */
 let si=0;
 function hs(n){document.getElementById('hs'+si).classList.remove('on');si=n;document.getElementById('hs'+si).classList.add('on');}
 setInterval(()=>hs((si+1)%3),5500);
 
-/* ── FORM ── */
 function submitFormFn(){
   const name = document.getElementById('full-name').value
   const phnNumber = document.getElementById('phone-number').value
@@ -1245,7 +1165,6 @@ function submitFormFn(){
 }
 function submitForm(){const ok=document.getElementById('formOk');ok.style.display='block';setTimeout(()=>{ok.style.display='none';},5000);}
 
-/* ── MOBILE NAV ── */
 function toggleNav(){document.getElementById('mainNav').classList.toggle('open');}
 document.addEventListener('click',e=>{
   const nav=document.getElementById('mainNav');const ham=document.getElementById('ham');
