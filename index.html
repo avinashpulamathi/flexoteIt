@@ -21,6 +21,9 @@
   --em3:      #1e8a6a;   /* light emerald */
   --em-pale:  #e9f4f0;   /* pale emerald tint */
   --em-soft:  #c8e6dd;   /* soft emerald */
+  --em-pale-err:#e1072e30; 
+  --em-soft-err:#ff1212;
+  --em-err:   #e1072e;  
   --gold:     #b8860b;   /* dark gold */
   --gold2:    #d4a017;   /* mid gold */
   --gold3:    #f0c040;   /* bright gold */
@@ -34,8 +37,8 @@
   --ink4:     #9a9a8e;   /* muted */
   --border:   #ddddd4;   /* subtle border */
   --shadow-s: 0 2px 12px rgba(13,79,60,.07);
-  --shadow-m: 0 6px 28px rgba(13,79,60,.10);
-  --shadow-l: 0 16px 52px rgba(13,79,60,.14);
+  --shadow-m: 0 6px 28px rgba(13, 79, 60, 0.199);
+  --shadow-l: 0 16px 52px rgba(13, 79, 60, 0.337);
   --r:        8px;
   --t:        .22s ease;
   --fh:       'Playfair Display', Georgia, serif;
@@ -403,6 +406,7 @@ section{padding:76px 0;}
 .fg input:focus,.fg textarea:focus,.fg select:focus{outline:none;border-color:var(--em);}
 .fg textarea{height:110px;resize:vertical;}
 .form-ok{display:none;background:var(--em-pale);border:1px solid var(--em-soft);color:var(--em);padding:14px;border-radius:5px;font-weight:700;margin-top:12px;}
+.form-not-ok{display:none;background:var(--em-pale-err);border:1px solid var(--em-soft-err);color:var(--em-err);padding:14px;border-radius:5px;font-weight:700;margin-top:12px;}
 
 /* ══════════ SITEMAP ══════════ */
 .sitemap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
@@ -510,69 +514,68 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     </div>
     <nav class="main-nav" id="mainNav">
       <div class="nav-menu-mobile" id="navMenu">
-        <div class="nav-item"><div class="nav-link cur" onclick="go('home')">Home</div></div>
+        <div class="nav-item"><div class="nav-link" onclick="go('home');setCur(event)">Home</div></div>
         <div class="nav-item">
           <div class="nav-link">About Us <span class="nav-arr">▾</span></div>
           <div class="drop">
-            <a href="#" onclick="go('about');return false;">About Us</a>
-            <a href="#" onclick="go('ceo');return false;">About CEO / Edupreneur</a>
-            <a href="#" onclick="go('team');return false;">Our Team</a>
-            <a href="#" onclick="go('clients-pg');return false;">Our Clients</a>
-            <a href="#" onclick="go('partners-pg');return false;">Our Partners</a>
-            <a href="#" onclick="go('sitemap');return false;">Sitemap</a>
-            <a href="#" onclick="go('stud-testi');return false;">Students Testimonials</a>
-            <a href="#" onclick="go('client-testi');return false;">Clients Testimonials</a>
+            <a href="#" onclick="go('about');setCur(event);return false">About Us</a>
+            <a href="#" onclick="go('team');setCur(event);return false;">Our Team</a>
+            <a href="#" onclick="go('clients-pg');setCur(event);return false;">Our Clients</a>
+            <a href="#" onclick="go('partners-pg');setCur(event);return false;">Our Partners</a>
+            <a href="#" onclick="go('sitemap');setCur(event);return false;">Sitemap</a>
+            <a href="#" onclick="go('stud-testi');setCur(event);return false;">Students Testimonials</a>
+            <a href="#" onclick="go('client-testi');setCur(event);return false;">Clients Testimonials</a>
           </div>
         </div>
         <div class="nav-item">
           <div class="nav-link">Services <span class="nav-arr">▾</span></div>
           <div class="drop">
-            <a href="#" onclick="go('web-designing');return false;">Web Designing Services</a>
-            <a href="#" onclick="go('web-development');return false;">Web Development Services</a>
-            <a href="#" onclick="go('website-redesign');return false;">Website Redesign Services</a>
-            <a href="#" onclick="go('website-maintenance');return false;">Website Maintenance Services</a>
-            <a href="#" onclick="go('graphic-designing');return false;">Graphic Designing Services</a>
-            <a href="#" onclick="go('logo-designing');return false;">Logo Designing Services</a>
-            <a href="#" onclick="go('wordpress-dev');return false;">WordPress Development</a>
-            <a href="#" onclick="go('web-hosting');return false;">Web Hosting Services</a>
-            <a href="#" onclick="go('responsive-design');return false;">Responsive Website Design</a>
+            <a href="#" onclick="go('web-designing');setCur(event);return false;">Web Designing Services</a>
+            <a href="#" onclick="go('web-development');setCur(event);return false;">Web Development Services</a>
+            <a href="#" onclick="go('website-redesign');setCur(event);return false;">Website Redesign Services</a>
+            <a href="#" onclick="go('website-maintenance');setCur(event);return false;">Website Maintenance Services</a>
+            <a href="#" onclick="go('graphic-designing');setCur(event);return false;">Graphic Designing Services</a>
+            <a href="#" onclick="go('logo-designing');setCur(event);return false;">Logo Designing Services</a>
+            <a href="#" onclick="go('wordpress-dev');setCur(event);return false;">WordPress Development</a>
+            <a href="#" onclick="go('web-hosting');setCur(event);return false;">Web Hosting Services</a>
+            <a href="#" onclick="go('responsive-design');setCur(event);return false;">Responsive Website Design</a>
           </div>
         </div>
         <div class="nav-item">
           <div class="nav-link">Solutions <span class="nav-arr">▾</span></div>
           <div class="drop">
             <a href="#" onclick="go('digital-marketing');return false;">Digital Marketing Services</a>
-            <a href="#" onclick="go('seo');return false;">SEO Services</a>
-            <a href="#" onclick="go('smm');return false;">SMM Services</a>
-            <a href="#" onclick="go('smo');return false;">SMO Services</a>
-            <a href="#" onclick="go('sem');return false;">SEM Services</a>
-            <a href="#" onclick="go('local-seo');return false;">Local SEO Services</a>
-            <a href="#" onclick="go('cms');return false;">Content Management System</a>
-            <a href="#" onclick="go('domain-reg');return false;">Domain Registration Services</a>
-            <a href="#" onclick="go('bulk-sms');return false;">Bulk SMS Services</a>
+            <a href="#" onclick="go('seo');setCur(event);return false;">SEO Services</a>
+            <a href="#" onclick="go('smm');setCur(event);return false;">SMM Services</a>
+            <a href="#" onclick="go('smo');setCur(event);return false;">SMO Services</a>
+            <a href="#" onclick="go('sem');setCur(event);return false;">SEM Services</a>
+            <a href="#" onclick="go('local-seo');setCur(event);return false;">Local SEO Services</a>
+            <a href="#" onclick="go('cms');setCur(event);return false;">Content Management System</a>
+            <a href="#" onclick="go('domain-reg');setCur(event);return false;">Domain Registration Services</a>
+            <a href="#" onclick="go('bulk-sms');setCur(event);return false;">Bulk SMS Services</a>
           </div>
         </div>
         <div class="nav-item">
           <div class="nav-link">Courses <span class="nav-arr">▾</span></div>
           <div class="drop">
-            <a href="#" onclick="go('wd-class');return false;">Web Designing Classroom Training</a>
-            <a href="#" onclick="go('wd-online');return false;">Web Designing Online Training</a>
-            <a href="#" onclick="go('dm-class');return false;">Digital Marketing Classroom Training</a>
-            <a href="#" onclick="go('dm-online');return false;">Digital Marketing Online Training</a>
-            <a href="#" onclick="go('php-class');return false;">PHP Classroom Training</a>
-            <a href="#" onclick="go('php-online');return false;">PHP Online Training</a>
-            <a href="#" onclick="go('seo-class');return false;">SEO Classroom Training</a>
-            <a href="#" onclick="go('seo-online');return false;">SEO Online Training</a>
-            <a href="#" onclick="go('sem-class');return false;">SEM Classroom Training</a>
-            <a href="#" onclick="go('sem-online');return false;">SEM Online Training</a>
-            <a href="#" onclick="go('smm-class');return false;">SMM Classroom Training</a>
-            <a href="#" onclick="go('smm-online');return false;">SMM Online Training</a>
+            <a href="#" onclick="go('wd-class');setCur(event);return false;">Web Designing Classroom Training</a>
+            <a href="#" onclick="go('wd-online');setCur(event);return false;">Web Designing Online Training</a>
+            <a href="#" onclick="go('dm-class');setCur(event);return false;">Digital Marketing Classroom Training</a>
+            <a href="#" onclick="go('dm-online');setCur(event);return false;">Digital Marketing Online Training</a>
+            <a href="#" onclick="go('php-class');setCur(event);return false;">PHP Classroom Training</a>
+            <a href="#" onclick="go('php-online');setCur(event);return false;">PHP Online Training</a>
+            <a href="#" onclick="go('seo-class');setCur(event);return false;">SEO Classroom Training</a>
+            <a href="#" onclick="go('seo-online');setCur(event);return false;">SEO Online Training</a>
+            <a href="#" onclick="go('sem-class');setCur(event);return false;">SEM Classroom Training</a>
+            <a href="#" onclick="go('sem-online');setCur(event);return false;">SEM Online Training</a>
+            <a href="#" onclick="go('smm-class');setCur(event);return false;">SMM Classroom Training</a>
+            <a href="#" onclick="go('smm-online');setCur(event);return false;">SMM Online Training</a>
           </div>
         </div>
-        <div class="nav-item"><div class="nav-link" onclick="go('portfolio')">Portfolio</div></div>
-        <div class="nav-item"><div class="nav-link" onclick="go('hosting')">Hosting</div></div>
-        <div class="nav-item"><div class="nav-link" onclick="go('contact')">Contact Us</div></div>
-        <div class="nav-item"><div class="nav-link btn-quote" onclick="go('contact')">Get a Quote</div></div>
+        <div class="nav-item"><div class="nav-link" onclick="go('portfolio');setCur(event)">Portfolio</div></div>
+        <div class="nav-item"><div class="nav-link" onclick="go('hosting');setCur(event)">Hosting</div></div>
+        <div class="nav-item"><div class="nav-link" onclick="go('contact');setCur(event)">Contact Us</div></div>
+        <div class="nav-item" style="margin-left: 10px;"><div class="nav-link btn-quote" onclick="go('contact');setCur(event, 8)">Get a Quote</div></div>
       </div>
     </nav>
     <div class="hamburger" id="ham" onclick="toggleNav()"><span></span><span></span><span></span></div>
@@ -626,10 +629,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   <!-- STAT STRIP -->
   <div class="hero-stat-strip">
     <div class="W"><div class="hstats">
-      <div class="hstat"><div class="hstat-n">500<sup>+</sup></div><div class="hstat-l">Projects Delivered</div></div>
-      <div class="hstat"><div class="hstat-n">10<sup>+</sup></div><div class="hstat-l">Years Experience</div></div>
-      <div class="hstat"><div class="hstat-n">300<sup>+</sup></div><div class="hstat-l">Happy Clients</div></div>
-      <div class="hstat"><div class="hstat-n">3000<sup>+</sup></div><div class="hstat-l">Students Trained</div></div>
+      <div class="hstat"><div class="hstat-n">50<sup>+</sup></div><div class="hstat-l">Projects Delivered</div></div>
+      <div class="hstat"><div class="hstat-n">5<sup>+</sup></div><div class="hstat-l">Years Experience</div></div>
+      <div class="hstat"><div class="hstat-n">10<sup>+</sup></div><div class="hstat-l">Happy Clients</div></div>
+      <div class="hstat"><div class="hstat-n">300<sup>+</sup></div><div class="hstat-l">Students Trained</div></div>
     </div></div>
   </div>
 
@@ -702,21 +705,21 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
         <div class="sec-eyebrow">Learn &amp; Grow</div>
         <h2 class="sec-title">Courses <span>We Offer</span></h2>
         <div class="rule"></div>
-        <p class="sec-desc">Professional training courses by 10+ years experienced industry experts on real-time projects. Classroom and online modes available.</p>
+        <p class="sec-desc">Professional training courses by 5+ years experienced industry experts on real-time projects. Classroom and online modes available.</p>
       </div>
       <div class="cards2">
         <div class="course-card"><div class="c-num">01</div><div class="c-body"><h3><a href="#" onclick="go('wd-class');return false;">Web Designing Classroom Training</a></h3><p>Learn the essentials of designing websites for all devices. Our training teaches HTML, CSS, JavaScript, Bootstrap, and Responsive Design at industry level. Course participants train on live projects.</p><span class="c-badge">🏫 Classroom</span></div></div>
-        <div class="course-card"><div class="c-num">02</div><div class="c-body"><h3><a href="#" onclick="go('wd-online');return false;">Web Designing Online Training</a></h3><p>Learn website designing online from our 10+ years experienced trainer. Software covered: Adobe Photoshop, HTML, CSS, Dreamweaver, JavaScript, jQuery, Bootstrap, WordPress CMS, and more.</p><span class="c-badge">💻 Online</span></div></div>
+        <div class="course-card"><div class="c-num">02</div><div class="c-body"><h3><a href="#" onclick="go('wd-online');return false;">Web Designing Online Training</a></h3><p>Learn website designing online from our 5+ years experienced trainer. Software covered: Adobe Photoshop, HTML, CSS, Dreamweaver, JavaScript, jQuery, Bootstrap, WordPress CMS, and more.</p><span class="c-badge">💻 Online</span></div></div>
         <div class="course-card"><div class="c-num">03</div><div class="c-body"><h3><a href="#" onclick="go('dm-class');return false;">Digital Marketing Classroom Training</a></h3><p>Learn Digital Marketing fundamentals, strategy, SEO, SEM, SMM, Email Marketing, Content Marketing, E-commerce, and Analytics. All participants train on real-time projects.</p><span class="c-badge">🏫 Classroom</span></div></div>
         <div class="course-card"><div class="c-num">04</div><div class="c-body"><h3><a href="#" onclick="go('dm-online');return false;">Digital Marketing Online Training</a></h3><p>60 days instructor-led online training covering everything from search engines to social media. Weekday and weekend classes available. Real-time project training included.</p><span class="c-badge">💻 Online</span></div></div>
-        <div class="course-card"><div class="c-num">05</div><div class="c-body"><h3><a href="#" onclick="go('seo-class');return false;">SEO Classroom Training</a></h3><p>SEO Training by 10+ years experienced real-time trainer. Learn to get results from your search marketing efforts with practical, hands-on skills you can use immediately.</p><span class="c-badge">🏫 Classroom</span></div></div>
+        <div class="course-card"><div class="c-num">05</div><div class="c-body"><h3><a href="#" onclick="go('seo-class');return false;">SEO Classroom Training</a></h3><p>SEO Training by 5+ years experienced real-time trainer. Learn to get results from your search marketing efforts with practical, hands-on skills you can use immediately.</p><span class="c-badge">🏫 Classroom</span></div></div>
         <div class="course-card"><div class="c-num">06</div><div class="c-body"><h3><a href="#" onclick="go('seo-online');return false;">SEO Online Training</a></h3><p>Learn how search engines work and explore best practices for on-page ranking, keyword research, link building, and result analysis. Topics include Google Webmaster Tools and more.</p><span class="c-badge">💻 Online</span></div></div>
         <div class="course-card"><div class="c-num">07</div><div class="c-body"><h3><a href="#" onclick="go('sem-class');return false;">SEM Classroom Training</a></h3><p>High-class PPC and AdWords training in Hyderabad. Become SEM certified with effective fees and 100% Placement Assistance. Logical approach to improving search visibility.</p><span class="c-badge">🏫 Classroom</span></div></div>
         <div class="course-card"><div class="c-num">08</div><div class="c-body"><h3><a href="#" onclick="go('sem-online');return false;">SEM Online Training</a></h3><p>Learn from how-to videos about SEM — Campaigns, Ad groups, Keywords Dashboard, Mobile Marketing, Video Marketing, AdWords Tools, and Shopping Campaigns.</p><span class="c-badge">💻 Online</span></div></div>
         <div class="course-card"><div class="c-num">09</div><div class="c-body"><h3><a href="#" onclick="go('smm-class');return false;">SMM Classroom Training</a></h3><p>SMM training focuses on creating content that users distribute via social channels. This course helps boost your online audience and build your social brand presence.</p><span class="c-badge">🏫 Classroom</span></div></div>
         <div class="course-card"><div class="c-num">10</div><div class="c-body"><h3><a href="#" onclick="go('smm-online');return false;">SMM Online Training</a></h3><p>Online SMM training covering Facebook, LinkedIn, Twitter, YouTube, Pinterest, and more. Delivered by a leading Social Media Marketing consultant and advisor.</p><span class="c-badge">💻 Online</span></div></div>
         <div class="course-card"><div class="c-num">11</div><div class="c-body"><h3><a href="#" onclick="go('php-class');return false;">PHP Classroom Training</a></h3><p>PHP Programming course for designing and developing dynamic, database-driven web pages using PHP 8. Placement assistance program for expert PHP developer career path.</p><span class="c-badge">🏫 Classroom</span></div></div>
-        <div class="course-card"><div class="c-num">12</div><div class="c-body"><h3><a href="#" onclick="go('php-online');return false;">PHP Online Training</a></h3><p>Professional PHP Online Training by 10+ years experienced industry experts. Personal tutors guide you through PHP theory and real project implementation.</p><span class="c-badge">💻 Online</span></div></div>
+        <div class="course-card"><div class="c-num">12</div><div class="c-body"><h3><a href="#" onclick="go('php-online');return false;">PHP Online Training</a></h3><p>Professional PHP Online Training by 5+ years experienced industry experts. Personal tutors guide you through PHP theory and real project implementation.</p><span class="c-badge">💻 Online</span></div></div>
       </div>
     </div>
   </section>
@@ -730,7 +733,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
         <div class="rule"></div>
       </div>
       <div class="port-grid">
-        <div class="port-card"><div class="port-thumb"><div class="port-emoji">🎨</div><div class="port-cat">Animation Training</div></div><div class="port-body"><h3>Fly High Animation</h3><p>Fly High Animation is the Animation Training, VFX Training, Web Designing Training, Graphic Designing Training, Digital Marketing Training and other multimedia related courses — quality training with live production experts as faculty with 10+ years of experience.</p><div class="port-tags"><span class="ptag">Web Designing</span><span class="ptag">Digital Marketing</span><span class="ptag">Logo Design</span><span class="ptag">Web Hosting</span></div></div></div>
+        <div class="port-card"><div class="port-thumb"><div class="port-emoji">🎨</div><div class="port-cat">Animation Training</div></div><div class="port-body"><h3>Fly High Animation</h3><p>Fly High Animation is the Animation Training, VFX Training, Web Designing Training, Graphic Designing Training, Digital Marketing Training and other multimedia related courses — quality training with live production experts as faculty with 5+ years of experience.</p><div class="port-tags"><span class="ptag">Web Designing</span><span class="ptag">Digital Marketing</span><span class="ptag">Logo Design</span><span class="ptag">Web Hosting</span></div></div></div>
         <div class="port-card"><div class="port-thumb"><div class="port-emoji">🍽️</div><div class="port-cat">Restaurant Chain</div></div><div class="port-body"><h3>Nala Bheemas USA</h3><p>Complete digital presence for a popular restaurant chain — visually appealing website design, menu showcase, and targeted digital marketing campaigns driving foot traffic and online orders.</p><div class="port-tags"><span class="ptag">Web Designing</span><span class="ptag">Digital Marketing</span></div></div></div>
         <div class="port-card"><div class="port-thumb"><div class="port-emoji">🖼️</div><div class="port-cat">Arts Institute</div></div><div class="port-body"><h3>Pixxel Arts</h3><p>Pixxel Arts is an Animation &amp; Visual Effects Training Institute focusing on Web Designing, Graphic Designing, and Digital Marketing Courses. Quality training from industry experts at Ameerpet, Hyderabad.</p><div class="port-tags"><span class="ptag">Web Designing</span><span class="ptag">Digital Marketing</span></div></div></div>
         <div class="port-card"><div class="port-thumb"><div class="port-emoji">📚</div><div class="port-cat">Education Services</div></div><div class="port-body"><h3>Academic Avenue</h3><p>Academic Avenue is an Online Assignment Help and Writing Service provider in USA, UK, Canada, Australia and New Zealand — offering all kinds of Assignment Help Services around the world.</p><div class="port-tags"><span class="ptag">Web Designing</span><span class="ptag">SEO</span></div></div></div>
@@ -752,7 +755,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
         <div class="rule rule-c"></div>
       </div>
       <div class="testi-grid">
-        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"I'm so happy to support Flexote IT Solutions because there you can surely get a professional way of designing and bulk of knowledge from Srikanth Sir who has 10+ years of experience. He is just a master in web designing. Just go for it — fee also affordable by anyone."</p><div class="testi-by"><div class="testi-av">AK</div><div><div class="testi-name">Akhil Bunny</div><div class="testi-role">Web Design Student</div></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"I'm so happy to support Flexote IT Solutions because there you can surely get a professional way of designing and bulk of knowledge from Srikanth Sir who has 5+ years of experience. He is just a master in web designing. Just go for it — fee also affordable by anyone."</p><div class="testi-by"><div class="testi-av">AK</div><div><div class="testi-name">Akhil Bunny</div><div class="testi-role">Web Design Student</div></div></div></div>
         <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Smart work by Flexote — they redesigned my old website and I didn't expect this much from them. I suggest anybody who is going to redesign their website to go with Flexote IT Solutions."</p><div class="testi-by"><div class="testi-av">AG</div><div><div class="testi-name">Abhinash Gurram</div><div class="testi-role">Business Owner</div></div></div></div>
         <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Flexote IT Solutions is one of the best Web Designing Services Companies in Hyderabad. They don't teach history of web design — they teach industrial level coding. I designed my own website with their support. Thank you Flexote!"</p><div class="testi-by"><div class="testi-av">PV</div><div><div class="testi-name">Prabhu Venkatesh</div><div class="testi-role">Entrepreneur</div></div></div></div>
       </div>
@@ -770,7 +773,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
       </div>
       <div class="partner-cards">
         <div class="partner-card"><div class="partner-logo">🖥️</div><div class="partner-info"><h4>Hosting Square</h4><p>Hosting Square is a Top Web Hosting Company which provides Indian server hosting. They provide best hosting features with 99% uptime server — our preferred partner for client hosting needs.</p><a href="http://www.hostingsquare.in/" target="_blank">Visit Website →</a></div></div>
-        <div class="partner-card"><div class="partner-logo">🎓</div><div class="partner-info"><h4>Srikanth Giddalur</h4><p>Mr. Srikanth Giddalur is a successful trainer who has trained 3000+ students in the field of Web Designing Course &amp; Digital Marketing Course — a trusted name in Hyderabad's digital education landscape.</p><a href="http://www.srikanthgiddalur.com/" target="_blank">Visit Website →</a></div></div>
       </div>
       <div style="margin-top:32px;text-align:center;"><button class="btn btn-outline" onclick="go('partners-pg')">Join Our Team</button></div>
     </div>
@@ -793,7 +795,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   <!-- CTA -->
   <div class="cta-em"><div class="W"><div class="cta-row">
     <div class="cta-txt"><h2>We don't just talk about what is coming next, <em>we do it.</em></h2><p>Join hundreds of businesses and thousands of students who have grown with Flexote IT Solutions.</p></div>
-    <button class="btn btn-white" onclick="go('contact')">Join With Us →</button>
+    <button class="btn btn-white" onclick="go('contact');setCur(event, 8)">Join With Us →</button>
   </div></div></div>
 </div>
 <!-- /HOME -->
@@ -827,12 +829,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     <div class="W">
       <div class="sec-hdr" style="text-align:center;"><div class="sec-eyebrow" style="justify-content:center;">Our Journey</div><h2 class="sec-title">Company <span>Milestones</span></h2><div class="rule rule-c"></div></div>
       <div class="timeline">
-        <div class="tl-item"><div class="tl-year">2009</div><div class="tl-label">Foundation of the Company</div></div>
-        <div class="tl-item"><div class="tl-year">2013</div><div class="tl-label">Our First Major Project</div></div>
-        <div class="tl-item"><div class="tl-year">2015</div><div class="tl-label">Training Division Launch</div></div>
-        <div class="tl-item"><div class="tl-year">2017</div><div class="tl-label">500+ Students Trained</div></div>
-        <div class="tl-item"><div class="tl-year">2021</div><div class="tl-label">Digital Marketing Division</div></div>
-        <div class="tl-item"><div class="tl-year">2025</div><div class="tl-label">3000+ Students, 500+ Projects</div></div>
+        <div class="tl-item"><div class="tl-year">2020</div><div class="tl-label">Foundation of the Company</div></div>
+        <div class="tl-item"><div class="tl-year">2021</div><div class="tl-label">Our First Major Project</div></div>
+        <div class="tl-item"><div class="tl-year">2022</div><div class="tl-label">Training Division Launch</div></div>
+        <div class="tl-item"><div class="tl-year">2023</div><div class="tl-label">150+ Students Trained</div></div>
+        <div class="tl-item"><div class="tl-year">2024</div><div class="tl-label">Digital Marketing Division</div></div>
+        <div class="tl-item"><div class="tl-year">2025</div><div class="tl-label">300+ Students, 50+ Projects</div></div>
       </div>
     </div>
   </section>
@@ -840,7 +842,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     <div class="W">
       <div class="sec-hdr" style="text-align:center;"><div class="sec-eyebrow" style="justify-content:center;">Why Choose Us</div><h2 class="sec-title">Why <span>Flexote IT Solutions?</span></h2><div class="rule rule-c"></div></div>
       <div class="why-grid">
-        <div class="why-item"><div class="why-ico">⏱️</div><h4>10+ Years of Experience</h4><p>Almost 10+ years of experience in Web Designing, Development, Digital Marketing, SEO, SMO, SMM, and Content Marketing all over the world.</p></div>
+        <div class="why-item"><div class="why-ico">⏱️</div><h4>5+ Years of Experience</h4><p>Almost 5+ years of experience in Web Designing, Development, Digital Marketing, SEO, SMO, SMM, and Content Marketing all over the world.</p></div>
         <div class="why-item"><div class="why-ico">🎯</div><h4>Our Mission</h4><p>On Time Presentation of every task, satisfying customers with flawless delivery to meet present and future business requirements.</p></div>
         <div class="why-item"><div class="why-ico">👁️</div><h4>Our Vision</h4><p>To be the world's solution company — a one-stop service provider firm maintaining a customer-centric approach and rich domain expertise.</p></div>
       </div>
@@ -858,36 +860,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
   </div></div></div>
 </div>
 
-<!-- ▓▓▓▓▓▓▓▓▓▓▓▓ CEO PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
-<div class="page" id="page-ceo">
-  <div class="ph ph-misc"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">About CEO / <em>Edupreneur</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <a href="#" onclick="go('about');return false;">About Us</a> › <span>About CEO</span></div></div></div>
-  <section style="background:#fff;">
-    <div class="W">
-      <div class="ceo-grid">
-        <div class="ceo-photo">👨‍💼</div>
-        <div>
-          <div class="ceo-name">Srikanth Giddalur</div>
-          <div class="ceo-role">Founder &amp; CEO — Flexote IT Solutions</div>
-          <div class="ceo-exp">12+ Years of Experience · Web Design &amp; Digital Marketing Expert</div>
-          <p>Mr. Srikanth Giddalur is the visionary Founder and CEO of Flexote IT Solutions, a Hyderabad-based web design and digital marketing company serving businesses across India and globally. With over 12 years of hands-on experience in website designing, web development, and digital marketing, he has built one of the most respected IT training and solutions companies in South India.</p>
-          <div class="ceo-quote">"We don't just talk about what is coming next — we do it. At Flexote, we believe every business deserves a powerful digital presence, regardless of size or budget."</div>
-          <p>A passionate edupreneur, Srikanth has personally trained over 3,000 students in web design, digital marketing, SEO, SEM, SMM, and PHP programming — giving them industry-ready skills with real-world project experience. His teaching philosophy focuses on practical learning over theory, ensuring every student can deliver professional-grade work from day one.</p>
-          <p>Under his leadership, Flexote IT Solutions has completed over 500 projects for clients across education, healthcare, hospitality, retail, and technology sectors. He is known for his commitment to quality, client satisfaction, and staying ahead of digital industry trends.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">Web Design</span><span class="skill-tag">Web Development</span><span class="skill-tag">Digital Marketing</span><span class="skill-tag">SEO Expert</span><span class="skill-tag">Google Ads Certified</span><span class="skill-tag">WordPress</span><span class="skill-tag">PHP &amp; MySQL</span><span class="skill-tag">UX Strategy</span>
-          </div>
-          <div class="soc-links">
-            <a class="soc-link" href="#">🔗 LinkedIn</a>
-            <a class="soc-link" href="#">𝕏 Twitter</a>
-            <a class="soc-link" href="#">📘 Facebook</a>
-            <a class="soc-link" href="#">▶ YouTube</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
 <!-- ▓▓▓▓▓▓▓▓▓▓▓▓ TEAM PAGE ▓▓▓▓▓▓▓▓▓▓▓▓ -->
 <div class="page" id="page-team">
   <div class="ph ph-misc"><div class="ph-pattern"></div><div class="W ph-inner"><h1 class="ph-title">Our <em>Team</em></h1><div class="breadcrumb"><a href="#" onclick="go('home');return false;">Home</a> › <a href="#" onclick="go('about');return false;">About Us</a> › <span>Our Team</span></div></div></div>
@@ -895,7 +867,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     <div class="W">
       <div class="sec-hdr" style="text-align:center;"><div class="sec-eyebrow" style="justify-content:center;">The People Behind Flexote</div><h2 class="sec-title">Meet Our <span>Talented Team</span></h2><div class="rule rule-c"></div><p class="sec-desc" style="margin:0 auto;">Passionate designers, developers, marketers, and trainers dedicated to your digital success.</p></div>
       <div class="team-grid">
-        <div class="team-card"><div class="team-photo">👨‍💼<span class="team-badge-pos">Founder &amp; CEO</span></div><div class="team-body"><h3>Srikanth Giddalur</h3><p>Founder &amp; CEO · 12+ yrs</p><div class="team-soc"><a href="#">in</a><a href="#">𝕏</a><a href="#">f</a></div></div></div>
         <div class="team-card"><div class="team-photo">👩‍🎨<span class="team-badge-pos">Lead Designer</span></div><div class="team-body"><h3>Priya Sharma</h3><p>UI/UX Lead · 7 yrs</p><div class="team-soc"><a href="#">in</a><a href="#">𝕏</a><a href="#">f</a></div></div></div>
         <div class="team-card"><div class="team-photo">👨‍💻<span class="team-badge-pos">Sr. Developer</span></div><div class="team-body"><h3>Arun Varma</h3><p>Full Stack Dev · 6 yrs</p><div class="team-soc"><a href="#">in</a><a href="#">𝕏</a><a href="#">f</a></div></div></div>
         <div class="team-card"><div class="team-photo">👩‍💻<span class="team-badge-pos">Dev Lead</span></div><div class="team-body"><h3>Sneha Reddy</h3><p>WordPress &amp; PHP · 5 yrs</p><div class="team-soc"><a href="#">in</a><a href="#">𝕏</a><a href="#">f</a></div></div></div>
@@ -929,7 +900,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
       <div class="sec-hdr"><div class="sec-eyebrow">Strategic Alliances</div><h2 class="sec-title">Our Brand <span>Partners</span></h2><div class="rule"></div><p class="sec-desc">We collaborate with industry leaders to deliver premium solutions and superior quality to all our clients.</p></div>
       <div class="partner-cards">
         <div class="partner-card"><div class="partner-logo">🖥️</div><div class="partner-info"><h4>Hosting Square</h4><p>Hosting Square is a Top Web Hosting Company which provides Indian server hosting. They provide best hosting features with 99% uptime server. Our preferred partner for all client hosting requirements — reliable, fast, and cost-effective.</p><a href="http://www.hostingsquare.in/" target="_blank">Visit Website →</a></div></div>
-        <div class="partner-card"><div class="partner-logo">🎓</div><div class="partner-info"><h4>Srikanth Giddalur</h4><p>Mr. Srikanth Giddalur is a successful trainer who trained 3000+ students in the field of Web Designing Course &amp; Digital Marketing Course. A trusted name in Hyderabad's IT education community with industry-proven curriculum.</p><a href="http://www.srikanthgiddalur.com/" target="_blank">Visit Website →</a></div></div>
         <div class="partner-card"><div class="partner-logo">📧</div><div class="partner-info"><h4>BulkSMS Pro</h4><p>Our SMS marketing partner providing enterprise-grade bulk messaging infrastructure for promotional and transactional SMS campaigns for businesses across Hyderabad and all of India.</p><a href="#" target="_blank">Visit Website →</a></div></div>
         <div class="partner-card"><div class="partner-logo">🔐</div><div class="partner-info"><h4>SSL Secure India</h4><p>Preferred SSL certificate and website security partner — ensuring all our client websites are protected with the latest security protocols, SSL certificates, and security hardening best practices.</p><a href="#" target="_blank">Visit Website →</a></div></div>
       </div>
@@ -945,7 +915,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     <div class="W">
       <div class="sitemap-grid">
         <div class="smap-col"><h3>Main Pages</h3><ul><li><a href="#" onclick="go('home');return false;">Home</a></li><li><a href="#" onclick="go('about');return false;">About Us</a></li><li><a href="#" onclick="go('portfolio');return false;">Portfolio</a></li><li><a href="#" onclick="go('hosting');return false;">Hosting</a></li><li><a href="#" onclick="go('contact');return false;">Contact Us</a></li><li><a href="#" onclick="go('sitemap');return false;">Sitemap</a></li></ul></div>
-        <div class="smap-col"><h3>About Us</h3><ul><li><a href="#" onclick="go('ceo');return false;">About CEO / Edupreneur</a></li><li><a href="#" onclick="go('team');return false;">Our Team</a></li><li><a href="#" onclick="go('clients-pg');return false;">Our Clients</a></li><li><a href="#" onclick="go('partners-pg');return false;">Our Partners</a></li><li><a href="#" onclick="go('stud-testi');return false;">Students Testimonials</a></li><li><a href="#" onclick="go('client-testi');return false;">Clients Testimonials</a></li></ul></div>
+        <div class="smap-col"><h3>About Us</h3><ul><li><a href="#" onclick="go('team');return false;">Our Team</a></li><li><a href="#" onclick="go('clients-pg');return false;">Our Clients</a></li><li><a href="#" onclick="go('partners-pg');return false;">Our Partners</a></li><li><a href="#" onclick="go('stud-testi');return false;">Students Testimonials</a></li><li><a href="#" onclick="go('client-testi');return false;">Clients Testimonials</a></li></ul></div>
         <div class="smap-col"><h3>Services</h3><ul><li><a href="#" onclick="go('web-designing');return false;">Web Designing</a></li><li><a href="#" onclick="go('web-development');return false;">Web Development</a></li><li><a href="#" onclick="go('website-redesign');return false;">Website Redesign</a></li><li><a href="#" onclick="go('website-maintenance');return false;">Website Maintenance</a></li><li><a href="#" onclick="go('graphic-designing');return false;">Graphic Designing</a></li><li><a href="#" onclick="go('logo-designing');return false;">Logo Designing</a></li><li><a href="#" onclick="go('wordpress-dev');return false;">WordPress Development</a></li><li><a href="#" onclick="go('web-hosting');return false;">Web Hosting</a></li><li><a href="#" onclick="go('responsive-design');return false;">Responsive Design</a></li></ul></div>
         <div class="smap-col"><h3>Solutions &amp; Courses</h3><ul><li><a href="#" onclick="go('digital-marketing');return false;">Digital Marketing</a></li><li><a href="#" onclick="go('seo');return false;">SEO Services</a></li><li><a href="#" onclick="go('smm');return false;">SMM Services</a></li><li><a href="#" onclick="go('smo');return false;">SMO Services</a></li><li><a href="#" onclick="go('sem');return false;">SEM Services</a></li><li><a href="#" onclick="go('local-seo');return false;">Local SEO</a></li><li><a href="#" onclick="go('wd-class');return false;">Web Design Course</a></li><li><a href="#" onclick="go('dm-class');return false;">Digital Marketing Course</a></li><li><a href="#" onclick="go('php-class');return false;">PHP Training</a></li></ul></div>
       </div>
@@ -960,7 +930,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     <div class="W">
       <div class="sec-hdr" style="text-align:center;"><div class="sec-eyebrow" style="justify-content:center;">3000+ Student Stories</div><h2 class="sec-title">What Our <span>Students Say</span></h2><div class="rule rule-c"></div></div>
       <div class="testi-page-grid">
-        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"I'm so happy to support Flexote IT Solutions because there you can surely get a professional way of designing and bulk of knowledge from Srikanth Sir who has 10+ years of experience. He is just a master in web designing. Just go for it — fee also affordable by anyone."</p><div class="testi-by"><div class="testi-av">AK</div><div><div class="testi-name">Akhil Bunny</div><div class="testi-role">Web Designing Graduate, Batch 2023</div></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"I'm so happy to support Flexote IT Solutions because there you can surely get a professional way of designing and bulk of knowledge from Srikanth Sir who has 5+ years of experience. He is just a master in web designing. Just go for it — fee also affordable by anyone."</p><div class="testi-by"><div class="testi-av">AK</div><div><div class="testi-name">Akhil Bunny</div><div class="testi-role">Web Designing Graduate, Batch 2023</div></div></div></div>
         <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Flexote's Digital Marketing course is the best in Hyderabad. The trainer's real-world experience and patience in explaining concepts made the learning process incredibly effective. I got placed within 3 weeks of completing the course!"</p><div class="testi-by"><div class="testi-av">SL</div><div><div class="testi-name">Sangeetha Lakshmi</div><div class="testi-role">Digital Marketing Graduate, 2024</div></div></div></div>
         <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"The PHP training at Flexote completely transformed my programming skills. The curriculum is up to date with industry standards. I got placed within 2 weeks of completing the course — highly recommend!"</p><div class="testi-by"><div class="testi-av">MK</div><div><div class="testi-name">Mohammed Khalid</div><div class="testi-role">PHP Development Graduate, 2024</div></div></div></div>
         <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"The SEO course at Flexote is very detailed and practical. I learned things I couldn't find anywhere online. The trainer explains everything with real examples from live campaigns — simply outstanding."</p><div class="testi-by"><div class="testi-av">DP</div><div><div class="testi-name">Deepika Patel</div><div class="testi-role">SEO Course Graduate, 2023</div></div></div></div>
@@ -996,7 +966,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
     <div class="W">
       <div class="sec-hdr" style="text-align:center;"><div class="sec-eyebrow" style="justify-content:center;">Our Work</div><h2 class="sec-title">Our top Web Design, Development &amp; <span>Digital Marketing Portfolio</span></h2><div class="rule rule-c"></div></div>
       <div class="port-grid">
-        <div class="port-card"><div class="port-thumb"><div class="port-emoji">🎨</div><div class="port-cat">Animation Training</div></div><div class="port-body"><h3>Fly High Animation</h3><p>Animation Training, VFX Training, Web Designing Training, Graphic Designing Training, Digital Marketing Training and multimedia courses — quality training with live production experts as faculty with 10+ years of experience.</p><div class="port-tags"><span class="ptag">Web Designing</span><span class="ptag">Digital Marketing</span><span class="ptag">Logo Designing</span><span class="ptag">Web Hosting</span></div></div></div>
+        <div class="port-card"><div class="port-thumb"><div class="port-emoji">🎨</div><div class="port-cat">Animation Training</div></div><div class="port-body"><h3>Fly High Animation</h3><p>Animation Training, VFX Training, Web Designing Training, Graphic Designing Training, Digital Marketing Training and multimedia courses — quality training with live production experts as faculty with 5+ years of experience.</p><div class="port-tags"><span class="ptag">Web Designing</span><span class="ptag">Digital Marketing</span><span class="ptag">Logo Designing</span><span class="ptag">Web Hosting</span></div></div></div>
         <div class="port-card"><div class="port-thumb"><div class="port-emoji">🍽️</div><div class="port-cat">Restaurant Chain</div></div><div class="port-body"><h3>Nala Bheemas USA</h3><p>Restaurant chain with visual storytelling, menu presentation, digital marketing campaigns, and social media management driving increased footfall and online brand recognition.</p><div class="port-tags"><span class="ptag">Web Designing</span><span class="ptag">Digital Marketing</span></div></div></div>
         <div class="port-card"><div class="port-thumb"><div class="port-emoji">🖼️</div><div class="port-cat">Arts Institute</div></div><div class="port-body"><h3>Pixxel Arts</h3><p>Animation &amp; Visual Effects Training Institute — complete website, course catalog, digital marketing and SEO strategy for this Ameerpet-based training institute.</p><div class="port-tags"><span class="ptag">Web Designing</span><span class="ptag">Digital Marketing</span></div></div></div>
         <div class="port-card"><div class="port-thumb"><div class="port-emoji">📚</div><div class="port-cat">Education Services</div></div><div class="port-body"><h3>Academic Avenue</h3><p>Online Assignment Help and Writing Service provider in USA, UK, Canada, Australia and New Zealand — strong SEO architecture targeting international academic assistance keywords.</p><div class="port-tags"><span class="ptag">Web Designing</span><span class="ptag">SEO</span></div></div></div>
@@ -1034,23 +1004,24 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
           <h2 class="sec-title">Let's Build Something <span>Great Together</span></h2>
           <div class="rule"></div>
           <p>Have a project in mind? We'd love to hear about it. Drop us a message and our team will get back to you within 24 hours with a tailored solution.</p>
-          <div class="c-detail"><div class="c-det-ico">📍</div><div class="c-det"><h4>Our Office</h4><p>#Flat No 202, Patel Residency,<br>Axis Bank Lane, Masab Tank,<br>Hyderabad, Telangana 500028.</p></div></div>
+          <div class="c-detail"><div class="c-det-ico">📍</div><div class="c-det"><h4>Our Office</h4><p>#3-21/3, Plot No 15,<br>Sri Rama Colony, Madhapur,<br>Telangana 500033.</p></div></div>
           <div class="c-detail"><div class="c-det-ico">📞</div><div class="c-det"><h4>Phone</h4><p><a href="tel:+918341377722">040 2955 3722</a></p></div></div>
           <div class="c-detail"><div class="c-det-ico">✉️</div><div class="c-det"><h4>Email</h4><p><a href="mailto:info@flexote.in">info@flexote.in</a></p></div></div>
           <div class="c-detail"><div class="c-det-ico">🕒</div><div class="c-det"><h4>Business Hours</h4><p>Monday – Saturday: 9:00 AM – 7:00 PM</p></div></div>
-          <div class="map-wrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4541920999573!2d78.44375631425244!3d17.437962105935807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c9670c77d5%3A0x35c0d2dc3d789b9c!2sSriG+Systems!5e0!3m2!1sen!2sin!4v1526115260115" allowfullscreen loading="lazy"></iframe></div>
+          <div class="map-wrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4003638772556!2d78.3959449!3d17.4405414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb914353ffffff%3A0x67579c675f8938b9!2sFLEXOTE%20IT%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1780126939378!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
         <div class="contact-form">
           <h3>Send Us a Message</h3>
           <div class="form-row">
-            <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your full name"/></div>
-            <div class="fg"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX"/></div>
+            <div class="fg full-name"><label>Full Name *</label><input id="full-name" type="text" placeholder="Your full name"/></div>
+            <div class="fg phone-number"><label>Phone Number *</label><input id="phone-number" type="tel" placeholder="+91 XXXXX XXXXX"/></div>
           </div>
-          <div class="fg"><label>Email Address *</label><input type="email" placeholder="your@email.com"/></div>
-          <div class="fg"><label>Service Required</label><select><option>-- Select a Service --</option><option>Web Designing</option><option>Web Development</option><option>Website Redesign</option><option>Digital Marketing</option><option>SEO Services</option><option>SMM Services</option><option>Web Hosting</option><option>Graphic Designing</option><option>Logo Designing</option><option>Training / Courses</option><option>Other</option></select></div>
-          <div class="fg"><label>Your Message *</label><textarea placeholder="Describe your project or query..."></textarea></div>
-          <button class="btn btn-em" style="width:100%;justify-content:center;font-size:15px;" onclick="submitForm()">Send Message ✈</button>
+          <div class="fg email-address"><label>Email Address *</label><input id="email-address" type="email" placeholder="your@email.com"/></div>
+          <div class="fg service-required"><label>Service Required</label><select><option>-- Select a Service --</option><option>Web Designing</option><option>Web Development</option><option>Website Redesign</option><option>Digital Marketing</option><option>SEO Services</option><option>SMM Services</option><option>Web Hosting</option><option>Graphic Designing</option><option>Logo Designing</option><option>Training / Courses</option><option>Other</option></select></div>
+          <div class="fg your-message"><label>Your Message *</label><textarea id="your-message" placeholder="Describe your project or query..."></textarea></div>
+          <button class="btn btn-em" style="width:100%;justify-content:center;font-size:15px;" onclick="submitFormFn()">Send Message ✈</button>
           <div class="form-ok" id="formOk">✅ Thank you! We'll get back to you within 24 hours.</div>
+          <div class="form-not-ok" id="formNotOk">Enter all mandatory fields</div>
         </div>
       </div>
     </div>
@@ -1105,7 +1076,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
           <div class="logo-text"><div class="logo-name" style="color:#fff;">Flex<em>ote</em> IT</div><div class="logo-tagline" style="color:rgba(255,255,255,.4);">Solutions · Hyderabad</div></div>
         </div>
         <p>Flexote IT Solutions is a Professional Web Designing, Web Development and Digital Marketing Services company from Hyderabad, India. We design and build websites, offer internet marketing solutions and help businesses create their brand.</p>
-        <div class="f-soc"><a href="#">f</a><a href="#">𝕏</a><a href="#">in</a><a href="#">▶</a><a href="#">W</a></div>
       </div>
       <div class="f-col">
         <h4>Quick Links</h4>
@@ -1137,7 +1107,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:62px 0 0;}
       <div class="f-col">
         <h4>Contact &amp; Locate Us</h4>
         <ul class="f-contact">
-          <li><span class="fi">📍</span>#Flat No 202, Patel Residency, Axis Bank Lane, Masab Tank, Hyderabad, Telangana 500028.</li>
+          <li><span class="fi">📍</span>#Flat No 3-21/3, Plot No 15, Sri Rama Colony, Madhapur, Telangana 500033.</li>
           <li><span class="fi">📞</span><a href="tel:+918341377722">040 2955 3722</a></li>
           <li><span class="fi">✉️</span><a href="mailto:info@flexote.in">info@flexote.in</a></li>
           <li><span class="fi">🕒</span>Mon–Sat: 9AM – 7PM</li>
@@ -1178,16 +1148,16 @@ const D = {
   'cms':{ph:'ph-solution',cat:'Solutions',icon:'📋',title:'Content Management System',desc:'CMS services can help you manage websites proficiently — integrating the right content management system to your website for easy content control.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">A well-chosen CMS empowers your team to update content, add pages, manage media, and publish blog posts independently — reducing dependence on developers for routine updates and giving you full control over your digital presence.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">CMS Platforms We Work With</h3><ul class="feature-list"><li>WordPress — the world's most popular flexible CMS</li><li>Joomla — powerful enterprise-grade CMS</li><li>Drupal — highly customisable for complex needs</li><li>Shopify — leading e-commerce CMS platform</li><li>Custom-built CMS solutions for unique requirements</li><li>Content workflow, approval system setup</li><li>CMS training and handover documentation</li></ul>`,meta:{Popular:'WordPress · Joomla · Drupal',Custom:'Available on Request',Training:'Included',Support:'Post-Launch 3 Months'}},
   'domain-reg':{ph:'ph-solution',cat:'Solutions',icon:'🌍',title:'Domain Registration Services',desc:'Everyone should register their domain name to build a website online. We make domain registration simple, fast, and affordable for your business.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Your domain name is your online address — it should be memorable, brand-consistent, and easy to spell. We help you search, select, and register the ideal domain with full DNS setup, email configuration, and ongoing management support included.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Domain Services Include</h3><ul class="feature-list"><li>.com, .in, .net, .org, .co.in, .io and 100+ TLDs</li><li>Domain name search and brand-match suggestions</li><li>Domain transfer assistance from any registrar</li><li>Domain renewal management and reminders</li><li>DNS configuration and subdomain setup</li><li>WHOIS privacy protection to hide personal info</li><li>Business email hosting with your domain name</li></ul>`,meta:{TLDs:'.com · .in · .net · 100+',Transfer:'From Any Registrar',Privacy:'WHOIS Protection Available',Renewal:'Annual Auto-Renewal'}},
   'bulk-sms':{ph:'ph-solution',cat:'Solutions',icon:'💬',title:'Bulk SMS Services',desc:'Bulk SMS is one of the easiest ways to send information to your target audience. We are esteemed for providing the best Bulk SMS Service in Hyderabad.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Bulk SMS is one of the most direct and cost-effective marketing channels available, with open rates exceeding 98%. We provide enterprise-grade bulk SMS infrastructure for businesses of all sizes — from local shops to large enterprises running national campaigns.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">SMS Campaign Types</h3><ul class="feature-list"><li>Promotional SMS campaigns for offers and sales</li><li>Transactional SMS alerts for orders and bookings</li><li>OTP delivery systems for website authentication</li><li>Appointment reminders for clinics and services</li><li>Event notifications and invitations</li><li>Lead generation via missed call to SMS campaigns</li><li>Festival and seasonal greeting campaigns</li></ul>`,meta:{Delivery:'Instant · 98% Open Rate',Coverage:'Pan India + International',API:'Available for Integration',Reporting:'Delivery Reports Included'}},
-  'wd-class':{ph:'ph-course',cat:'Courses',icon:'🏫',title:'Web Designing Classroom Training',desc:'Learn the essentials of designing websites for all devices. Our Responsive Web Design course teaches industry standards HTML, CSS, JavaScript and much more.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Our Web Designing Classroom Training is a comprehensive, industry-focused program designed for beginners and working professionals. Learn the essentials of designing websites for all devices with this interactive web design training course taught by our 10+ years experienced trainer.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Our Responsive web design course teaches designers and developers the necessary HTML, CSS &amp; JavaScript skills for building web applications and sites that adopt to a wide array of devices. Course participants will learn current industry standards like Light Weight, SEO Friendly coding practices.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Curriculum Highlights</h3><ul class="feature-list"><li>HTML5 and CSS3 fundamentals and advanced techniques</li><li>JavaScript and jQuery for interactive web pages</li><li>Bootstrap 5 responsive framework</li><li>Adobe Photoshop and Illustrator basics for designers</li><li>Adobe Dreamweaver for visual development</li><li>WordPress CMS development and customisation</li><li>SEO basics integrated into every website built</li><li>Web hosting, domain setup, and deployment</li><li>Live project work on real websites</li><li>Portfolio development and career guidance</li><li>100% Job Placement Assistance</li></ul>`,meta:{Duration:'3 Months',Mode:'Classroom (Live)',Batches:'Weekday + Weekend',Placement:'100% Assistance'}},
-  'wd-online':{ph:'ph-course',cat:'Courses',icon:'💻',title:'Web Designing Online Training',desc:'Learn website designing online from our 10+ years experienced trainer. Software covered: Photoshop, HTML, CSS, Dreamweaver, JavaScript, jQuery, WordPress and more.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Learn website designing online from our 10+ years of experienced trainer. Software covered in our training programme are Adobe Photoshop, HTML, CSS, Adobe Dreamweaver, JavaScript, jQuery, HTML5, CSS3, Responsive Design, Bootstrap, SEO Basics, Web Hosting, and WordPress CMS.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">In this course, participants will have an experience on a live project as we are a production-based Training Institute — giving you real industry experience from day one of training.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">What You Will Learn</h3><ul class="feature-list"><li>HTML5, CSS3, JavaScript and jQuery from basics to advanced</li><li>Adobe Photoshop and Dreamweaver for web design</li><li>Responsive design using Bootstrap 5</li><li>HTML5 and CSS3 animations and transitions</li><li>WordPress CMS website creation and customisation</li><li>SEO basics for every website you build</li><li>Web hosting setup, cPanel and domain management</li><li>Real project: design and deploy your own website</li></ul>`,meta:{Duration:'3 Months',Mode:'Online (Live + Recorded)',Batches:'Weekday + Weekend',Placement:'100% Assistance'}},
+  'wd-class':{ph:'ph-course',cat:'Courses',icon:'🏫',title:'Web Designing Classroom Training',desc:'Learn the essentials of designing websites for all devices. Our Responsive Web Design course teaches industry standards HTML, CSS, JavaScript and much more.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Our Web Designing Classroom Training is a comprehensive, industry-focused program designed for beginners and working professionals. Learn the essentials of designing websites for all devices with this interactive web design training course taught by our 5+ years experienced trainer.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Our Responsive web design course teaches designers and developers the necessary HTML, CSS &amp; JavaScript skills for building web applications and sites that adopt to a wide array of devices. Course participants will learn current industry standards like Light Weight, SEO Friendly coding practices.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Curriculum Highlights</h3><ul class="feature-list"><li>HTML5 and CSS3 fundamentals and advanced techniques</li><li>JavaScript and jQuery for interactive web pages</li><li>Bootstrap 5 responsive framework</li><li>Adobe Photoshop and Illustrator basics for designers</li><li>Adobe Dreamweaver for visual development</li><li>WordPress CMS development and customisation</li><li>SEO basics integrated into every website built</li><li>Web hosting, domain setup, and deployment</li><li>Live project work on real websites</li><li>Portfolio development and career guidance</li><li>100% Job Placement Assistance</li></ul>`,meta:{Duration:'3 Months',Mode:'Classroom (Live)',Batches:'Weekday + Weekend',Placement:'100% Assistance'}},
+  'wd-online':{ph:'ph-course',cat:'Courses',icon:'💻',title:'Web Designing Online Training',desc:'Learn website designing online from our 5+ years experienced trainer. Software covered: Photoshop, HTML, CSS, Dreamweaver, JavaScript, jQuery, WordPress and more.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Learn website designing online from our 5+ years of experienced trainer. Software covered in our training programme are Adobe Photoshop, HTML, CSS, Adobe Dreamweaver, JavaScript, jQuery, HTML5, CSS3, Responsive Design, Bootstrap, SEO Basics, Web Hosting, and WordPress CMS.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">In this course, participants will have an experience on a live project as we are a production-based Training Institute — giving you real industry experience from day one of training.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">What You Will Learn</h3><ul class="feature-list"><li>HTML5, CSS3, JavaScript and jQuery from basics to advanced</li><li>Adobe Photoshop and Dreamweaver for web design</li><li>Responsive design using Bootstrap 5</li><li>HTML5 and CSS3 animations and transitions</li><li>WordPress CMS website creation and customisation</li><li>SEO basics for every website you build</li><li>Web hosting setup, cPanel and domain management</li><li>Real project: design and deploy your own website</li></ul>`,meta:{Duration:'3 Months',Mode:'Online (Live + Recorded)',Batches:'Weekday + Weekend',Placement:'100% Assistance'}},
   'dm-class':{ph:'ph-course',cat:'Courses',icon:'🏫',title:'Digital Marketing Classroom Training',desc:'In our Digital Marketing course you will learn Basics, Strategy, SEO, SEM, SMM, Email Marketing, E-commerce and much more — on real-time projects.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">In Digital Marketing course you will learn Basics of Advertising, Digital Marketing vs Traditional Media, Benefits of Digital Marketing, Latest Digital Marketing Trends, Digital Media Marketing Platform, Digital Marketing Strategy for Websites, Types of Websites and CMS Tools, E-commerce Website Development and What is Digital Media in 2024.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">All course participants will be taught on real-time projects to make them meet the industry standards — with live campaigns on Google Ads, Meta Ads, and organic social media channels.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Modules Covered</h3><ul class="feature-list"><li>Digital Marketing fundamentals and strategy planning</li><li>Search Engine Optimisation (SEO) — on-page and off-page</li><li>Search Engine Marketing (Google Ads / PPC)</li><li>Social Media Marketing (Facebook, Instagram, LinkedIn)</li><li>Email Marketing — campaigns, automation, sequences</li><li>Content Marketing and strategic blog writing</li><li>Google Analytics 4 and data-driven decision making</li><li>Online Reputation Management (ORM)</li><li>Google and Meta certification exam preparation</li></ul>`,meta:{Duration:'4 Months',Mode:'Classroom (Live)',Batches:'Weekday + Weekend',Placement:'100% Assistance'}},
   'dm-online':{ph:'ph-course',cat:'Courses',icon:'💻',title:'Digital Marketing Online Training',desc:'60 days instructor-led online digital marketing training guiding you through everything from search engines to social media and beyond.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Digital Marketing Online Training by our expert Digital Marketing trainer provides 60 days of access to instructor-led online training courses. Our online digital marketing training will guide you through everything from search engines to social media and beyond.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">We offer both Weekdays and Weekends Classes for Digital Marketing Course. Course participants will be taught on real-time projects to make them meet the industry standards — with hands-on experience managing live campaigns.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">What's Covered</h3><ul class="feature-list"><li>Complete digital marketing ecosystem and strategy</li><li>SEO, SEM, SMM, SMO all in one programme</li><li>Google Analytics 4 and Search Console</li><li>Facebook and Instagram Ads management</li><li>YouTube marketing and video SEO</li><li>LinkedIn B2B marketing and lead generation</li><li>Email and WhatsApp Business marketing</li><li>Real campaign creation and management</li></ul>`,meta:{Duration:'60 Days (4 Months)',Mode:'Online Live Sessions',Batches:'Weekday + Weekend',Placement:'100% Assistance'}},
   'php-class':{ph:'ph-course',cat:'Courses',icon:'🏫',title:'PHP Classroom Training',desc:'PHP Programming course providing the knowledge to design and develop dynamic, database-driven web pages using PHP 8 with placement assistance.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">In Flexote IT Solutions, our PHP Programming course provides the knowledge necessary to design and develop dynamic, database-driven web pages using PHP 8. Our PHP Training Course with Placement assistance programme is for all who want to become expert PHP Programmers, including deeper training on PHP Frameworks.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Curriculum</h3><ul class="feature-list"><li>PHP 8 fundamentals — syntax, functions, arrays, strings</li><li>Object-Oriented Programming (OOP) in PHP</li><li>MySQL and MariaDB database design and operations</li><li>CRUD operations, prepared statements and security</li><li>Form handling, validation and file upload management</li><li>Session management, cookies and authentication</li><li>REST API development and third-party integration</li><li>Laravel framework introduction and MVC pattern</li><li>Security best practices — SQL injection, XSS prevention</li><li>Live project: complete dynamic web application</li></ul>`,meta:{Duration:'3 Months',Mode:'Classroom (Live)',Stack:'PHP 8 · MySQL · Laravel',Placement:'100% Assistance'}},
-  'php-online':{ph:'ph-course',cat:'Courses',icon:'💻',title:'PHP Online Training',desc:'Professional PHP Online Training by 10+ years experienced industry experts. Personal tutors teach and guide you through PHP theory and real project implementation.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">We offer Professional PHP Online Training by 10+ years of experienced industry experts from Hyderabad. Learn Online PHP Course and develop your own robust and dynamic web applications. PHP Online Training will be conducted by our personal tutors who will teach and guide you through the PHP theory and how to implement it in real projects.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Topics Covered</h3><ul class="feature-list"><li>PHP 8 syntax, control structures, functions and arrays</li><li>Object-Oriented PHP and design patterns</li><li>MySQL database operations and query optimisation</li><li>Form handling and server-side validation</li><li>MVC design pattern implementation</li><li>Laravel framework basics and routing</li><li>WordPress theme and plugin development</li><li>Deployment and hosting setup on Linux servers</li></ul>`,meta:{Duration:'3 Months',Mode:'Online Live + Recorded',Batches:'Weekday + Weekend',Placement:'100% Assistance'}},
-  'seo-class':{ph:'ph-course',cat:'Courses',icon:'🏫',title:'SEO Classroom Training',desc:'SEO Training in Hyderabad by 10+ years experienced real-time trainer. Learn to get results from search marketing with practical, hands-on skills.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">SEO Training in Hyderabad by 10+ years of experienced real-time trainer. In our SEO classroom training we teach you how to get results from your search marketing efforts and empower you with practical and hands-on skills you can put to work instantly. This training course will help you learn SEO to out-optimise your competition.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Training will be provided on live projects to make the course participant understand and meet current industry standards — not theory, but real website ranking work.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">What You Will Master</h3><ul class="feature-list"><li>SEO fundamentals and how search engine algorithms work</li><li>Keyword research and competitive keyword analysis</li><li>On-page optimisation techniques and best practices</li><li>Technical SEO — site speed, schema, XML sitemap</li><li>Off-page SEO and high-quality white-hat link building</li><li>Local SEO and Google My Business optimisation</li><li>Google Search Console and Analytics 4</li><li>SEO tools: Ahrefs, SEMrush, Moz, Screaming Frog</li></ul>`,meta:{Duration:'6 Weeks',Mode:'Classroom (Live Projects)',Tools:'Ahrefs · SEMrush · GSC',Certification:'Certificate Provided'}},
+  'php-online':{ph:'ph-course',cat:'Courses',icon:'💻',title:'PHP Online Training',desc:'Professional PHP Online Training by 5+ years experienced industry experts. Personal tutors teach and guide you through PHP theory and real project implementation.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">We offer Professional PHP Online Training by 5+ years of experienced industry experts from Hyderabad. Learn Online PHP Course and develop your own robust and dynamic web applications. PHP Online Training will be conducted by our personal tutors who will teach and guide you through the PHP theory and how to implement it in real projects.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Topics Covered</h3><ul class="feature-list"><li>PHP 8 syntax, control structures, functions and arrays</li><li>Object-Oriented PHP and design patterns</li><li>MySQL database operations and query optimisation</li><li>Form handling and server-side validation</li><li>MVC design pattern implementation</li><li>Laravel framework basics and routing</li><li>WordPress theme and plugin development</li><li>Deployment and hosting setup on Linux servers</li></ul>`,meta:{Duration:'3 Months',Mode:'Online Live + Recorded',Batches:'Weekday + Weekend',Placement:'100% Assistance'}},
+  'seo-class':{ph:'ph-course',cat:'Courses',icon:'🏫',title:'SEO Classroom Training',desc:'SEO Training in Hyderabad by 5+ years experienced real-time trainer. Learn to get results from search marketing with practical, hands-on skills.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">SEO Training in Hyderabad by 5+ years of experienced real-time trainer. In our SEO classroom training we teach you how to get results from your search marketing efforts and empower you with practical and hands-on skills you can put to work instantly. This training course will help you learn SEO to out-optimise your competition.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Training will be provided on live projects to make the course participant understand and meet current industry standards — not theory, but real website ranking work.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">What You Will Master</h3><ul class="feature-list"><li>SEO fundamentals and how search engine algorithms work</li><li>Keyword research and competitive keyword analysis</li><li>On-page optimisation techniques and best practices</li><li>Technical SEO — site speed, schema, XML sitemap</li><li>Off-page SEO and high-quality white-hat link building</li><li>Local SEO and Google My Business optimisation</li><li>Google Search Console and Analytics 4</li><li>SEO tools: Ahrefs, SEMrush, Moz, Screaming Frog</li></ul>`,meta:{Duration:'6 Weeks',Mode:'Classroom (Live Projects)',Tools:'Ahrefs · SEMrush · GSC',Certification:'Certificate Provided'}},
   'seo-online':{ph:'ph-course',cat:'Courses',icon:'💻',title:'SEO Online Training',desc:'Learn how search engines work and explore best practices for on-page ranking, keyword research, link building, and analysing results.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Be trained on how search engines work and explore best practices for calculating on-page ranking factors, increasing page rank, performing keyword research, getting quality links and analysing results through this comprehensive online SEO training programme.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Course Content</h3><ul class="feature-list"><li>Introduction to SEO and search engine algorithms</li><li>Keyword research methodology and tools</li><li>On-page and off-page SEO complete strategy</li><li>Google Webmaster Tools and Search Console</li><li>WordPress SEO with Yoast and RankMath plugins</li><li>Link building strategies — white-hat techniques only</li><li>Google Analytics 4 — traffic analysis and reporting</li><li>Competitor gap analysis and content strategy</li></ul>`,meta:{Duration:'6 Weeks',Mode:'Online (Live Sessions)',Tools:'Google Suite + Ahrefs',Certification:'Certificate Provided'}},
   'sem-class':{ph:'ph-course',cat:'Courses',icon:'🏫',title:'SEM Classroom Training',desc:'High-class PPC and AdWords training in Hyderabad. Become SEM certified with effective fees and 100% Placement Assistance.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Join our Institute for SEM training in Hyderabad. Learn Search Engine Marketing courses and become SEM certified expert with effective fees and 100% Placement Assistance. We offer high-class PPC training and AdWords training in Hyderabad with a logical approach towards improving the search visibility of websites with cutting-edge techniques.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Topics Covered</h3><ul class="feature-list"><li>Introduction to SEM, PPC and paid search ecosystem</li><li>Google Ads account and campaign structure</li><li>Search campaign creation and keyword match types</li><li>Ad copy writing, testing and quality score optimisation</li><li>Display advertising and the Google Display Network</li><li>Shopping campaigns for e-commerce businesses</li><li>YouTube advertising and video campaign creation</li><li>Conversion tracking, remarketing and retargeting</li><li>Google Ads certification exam preparation</li></ul>`,meta:{Duration:'6 Weeks',Mode:'Classroom (Live)',Certification:'Google Ads Exam Prep',Placement:'100% Assistance'}},
-  'sem-online':{ph:'ph-course',cat:'Courses',icon:'💻',title:'SEM Online Training',desc:'Find exactly what you want to learn about SEM from how-to videos taught by 10+ years experienced industry experts.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Find exactly what you want to learn from how-to videos about SEM, taught by our 10+ years of experience industry experts. The main topics are Introduction of SEM, Campaigns, Ad Groups and Keywords Dashboard, Mobile Marketing, Video Marketing, AdWords Tools, AdWords Exam Guidelines, and Shopping Campaign setup.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Course Modules</h3><ul class="feature-list"><li>Google Ads campaign types and account structure</li><li>Keyword research for paid search campaigns</li><li>Ad creation and high-converting copywriting</li><li>Bid management strategies and smart bidding</li><li>Mobile advertising and app campaigns</li><li>YouTube advertising and video campaigns</li><li>AdWords exam guidelines and certification tips</li></ul>`,meta:{Duration:'6 Weeks',Mode:'Online (Live + Recorded)',Certification:'Google Ads Exam Prep',Batches:'Weekday + Weekend'}},
+  'sem-online':{ph:'ph-course',cat:'Courses',icon:'💻',title:'SEM Online Training',desc:'Find exactly what you want to learn about SEM from how-to videos taught by 5+ years experienced industry experts.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Find exactly what you want to learn from how-to videos about SEM, taught by our 5+ years of experience industry experts. The main topics are Introduction of SEM, Campaigns, Ad Groups and Keywords Dashboard, Mobile Marketing, Video Marketing, AdWords Tools, AdWords Exam Guidelines, and Shopping Campaign setup.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Course Modules</h3><ul class="feature-list"><li>Google Ads campaign types and account structure</li><li>Keyword research for paid search campaigns</li><li>Ad creation and high-converting copywriting</li><li>Bid management strategies and smart bidding</li><li>Mobile advertising and app campaigns</li><li>YouTube advertising and video campaigns</li><li>AdWords exam guidelines and certification tips</li></ul>`,meta:{Duration:'6 Weeks',Mode:'Online (Live + Recorded)',Certification:'Google Ads Exam Prep',Batches:'Weekday + Weekend'}},
   'smm-class':{ph:'ph-course',cat:'Courses',icon:'🏫',title:'SMM Classroom Training',desc:'SMM training focuses on creating awareness, consideration and conversion through social media. Build your social brand and boost your online audience.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">SMM (Social Media Marketing) is a method of creating awareness, consideration and conversion through social media sites. Our SMM training focuses on efforts to make content that inspires users to distribute it across their social channels. This Social Media Marketing Course helps boost your online audience and build your social brand.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">What You Will Learn</h3><ul class="feature-list"><li>Social media strategy development and planning</li><li>Facebook Marketing and Meta Ads Manager</li><li>Instagram marketing, Reels, and Stories strategy</li><li>LinkedIn B2B marketing and lead generation</li><li>Twitter/X brand engagement and growth tactics</li><li>YouTube channel growth and video content strategy</li><li>Influencer marketing and collaborations</li><li>Social media analytics, reporting and optimisation</li></ul>`,meta:{Duration:'6 Weeks',Mode:'Classroom (Live)',Platforms:'6+ Social Networks',Certification:'Certificate Provided'}},
   'smm-online':{ph:'ph-course',cat:'Courses',icon:'💻',title:'SMM Online Training',desc:'Online SMM training covering Facebook, LinkedIn, Twitter, YouTube, Pinterest and more — delivered by a leading social media marketing advisor.',body:`<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">This Online Training on Social Media Marketing (SMM) is delivered by our lead trainer, a leading consultant and advisor in Social Media Marketing. This training covers the complete concepts of SMM as well as platforms like Facebook, Google+, LinkedIn, Twitter, YouTube, Pinterest and more.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Platforms and Topics</h3><ul class="feature-list"><li>Facebook organic strategy and Meta Ads</li><li>Instagram content, Reels and growth hacking</li><li>LinkedIn networking, B2B and lead generation</li><li>Twitter/X audience building and engagement</li><li>YouTube marketing and video SEO fundamentals</li><li>Pinterest visual marketing for brand growth</li><li>Canva and design basics for social media content</li><li>Social media analytics interpretation and reporting</li></ul>`,meta:{Duration:'6 Weeks',Mode:'Online (Live + Recorded)',Platforms:'7+ Social Networks',Batches:'Weekday + Weekend'}}
 };
@@ -1227,6 +1197,37 @@ function go(id){
   }
   document.getElementById('page-home').classList.add('active');
 }
+const navLinks = document.querySelectorAll('.nav-link')
+function getCur() {
+  if(!sessionStorage.getItem('cur')){
+    navLinks[0].classList.add('cur')
+    return;
+  }
+  navLinks.forEach((ele, ind) => {
+    if(ind == sessionStorage.getItem('cur')){
+      ele.classList.add('cur')
+    }
+  })
+}
+getCur()
+function setCur(e, op) {
+  navLinks.forEach((ele) => {
+    ele.classList?.remove('cur')
+  })
+  let ele = e.target
+  if(op){ele = navLinks[7]}
+  if(ele.classList[0] === 'nav-link'){
+    ele.classList.add('cur')
+  }else{
+    ele.parentElement.previousElementSibling?.classList?.add('cur')
+  }
+  navLinks.forEach((ele, ind) => {
+    if(ele.classList.contains('cur')){
+      sessionStorage.setItem('cur', ind)
+    }
+  })
+  return;
+}
 
 /* ── HERO SLIDER ── */
 let si=0;
@@ -1234,6 +1235,14 @@ function hs(n){document.getElementById('hs'+si).classList.remove('on');si=n;docu
 setInterval(()=>hs((si+1)%3),5500);
 
 /* ── FORM ── */
+function submitFormFn(){
+  const name = document.getElementById('full-name').value
+  const phnNumber = document.getElementById('phone-number').value
+  const email = document.getElementById('email-address').value
+  const message = document.getElementById('your-message').value
+  if(name !== '' && phnNumber !== '' && email !== '' && message !== ''){submitForm();return}
+  const ok=document.getElementById('formNotOk');ok.style.display='block';setTimeout(()=>{ok.style.display='none';},5000);
+}
 function submitForm(){const ok=document.getElementById('formOk');ok.style.display='block';setTimeout(()=>{ok.style.display='none';},5000);}
 
 /* ── MOBILE NAV ── */
@@ -1245,4 +1254,3 @@ document.addEventListener('click',e=>{
 </script>
 </body>
 </html>
-HTMLEOF
