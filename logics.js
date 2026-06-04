@@ -4,7 +4,7 @@ const D = {
     cat: "Services",
     icon: "🌐",
     title: "Website Designing Services",
-    desc: "Flexote IT Solutions is a professional web design and development services company from Hyderabad offering business solutions around the world. We specialise in creating stunning, user-friendly websites that reflect your brand and convert visitors into customers.",
+    desc: "Flexot IT Solutions is a professional web design and development services company from Hyderabad offering business solutions around the world. We specialise in creating stunning, user-friendly websites that reflect your brand and convert visitors into customers.",
     body: `<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Are you looking for the best website designing services in Hyderabad? We are a team of creative Web Designers &amp; Developers based in Hyderabad providing a wide range of Web Design Services which includes custom website design, landing page design, e-commerce design, corporate website design and much more.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">A professional website design can catch the attention of potential customers towards your business or service and a poor website design can keep potential customers away. We ensure every website we build is visually stunning, fast loading, mobile responsive, and optimised for search engines.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Our Web Designing Services Include</h3><ul class="feature-list"><li>Custom Website Design tailored to your brand identity</li><li>Responsive layouts for desktop, tablet, and mobile</li><li>UI/UX design focused on user engagement and conversion</li><li>Landing page design for marketing campaigns</li><li>E-commerce website design with product catalog</li><li>Corporate and business website design</li><li>Portfolio and showcase websites</li><li>CMS-based websites (WordPress, Joomla)</li></ul>`,
     meta: {
       Duration: "2–4 Weeks",
@@ -18,7 +18,7 @@ const D = {
     cat: "Services",
     icon: "⚙️",
     title: "Website Development Services",
-    desc: "Flexote brings cutting-edge technologies to your business for all your development needs. Our goal is your growth in the online market space through robust, scalable web solutions.",
+    desc: "Flexot brings cutting-edge technologies to your business for all your development needs. Our goal is your growth in the online market space through robust, scalable web solutions.",
     body: `<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Our web development services combine technical excellence with deep business understanding. We build websites and web applications using the latest technologies including HTML5, CSS3, JavaScript, PHP, and modern CMS platforms that are built to last and scale with your business.</p><p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">All development work adheres to W3C Standards and the latest coding best practices, ensuring secure, maintainable, and high-performance web applications that serve your users and search engines alike.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Technologies We Work With</h3><ul class="feature-list"><li>HTML5, CSS3, JavaScript (ES6+) and jQuery</li><li>PHP 8 &amp; MySQL / MariaDB backend development</li><li>WordPress, Joomla, Drupal CMS platforms</li><li>Bootstrap 5 and Tailwind CSS front-end frameworks</li><li>REST API development and third-party integration</li><li>Payment gateway integration (PayPal, Razorpay)</li><li>E-commerce development with WooCommerce</li></ul>`,
     meta: {
       Duration: "3–8 Weeks",
@@ -32,7 +32,7 @@ const D = {
     cat: "Services",
     icon: "🔄",
     title: "Website Redesign Services",
-    desc: "Flexote is a leading professional website redesigning service provider. We redesign your existing website with a new look, feel, and functionality to drive better results.",
+    desc: "Flexot is a leading professional website redesigning service provider. We redesign your existing website with a new look, feel, and functionality to drive better results.",
     body: `<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Is your website outdated, slow, or not converting visitors? Our website redesign service gives your digital presence a complete transformation — new design, better UX, faster loading, and improved SEO performance without losing your existing rankings.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Our Redesign Process</h3><ul class="feature-list"><li>Comprehensive website audit and competitor analysis</li><li>UX/UI redesign planning and wireframing</li><li>Modern responsive design implementation</li><li>Content migration and on-page SEO optimisation</li><li>Performance and speed optimisation</li><li>Cross-browser testing and quality assurance</li><li>Launch and post-launch monitoring</li></ul>`,
     meta: {
       Duration: "3–6 Weeks",
@@ -60,7 +60,7 @@ const D = {
     cat: "Services",
     icon: "🎨",
     title: "Graphic Designing Services",
-    desc: "Flexote can provide you the best graphic design services in Hyderabad. We offer a broad spectrum of creative graphic design solutions to grow your brand visually.",
+    desc: "Flexot can provide you the best graphic design services in Hyderabad. We offer a broad spectrum of creative graphic design solutions to grow your brand visually.",
     body: `<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Great visuals are at the heart of every powerful brand. Our graphic design team creates stunning visual assets that communicate your message clearly and leave a lasting impression on your audience across every medium — digital and print.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Design Services Include</h3><ul class="feature-list"><li>Brand identity design and brand guidelines</li><li>Brochure, flyer, and corporate stationery design</li><li>Social media graphics and content templates</li><li>Banner and display advertising creative</li><li>Packaging design and product labels</li><li>Presentation and pitch deck design</li><li>Infographics and data visualisation</li></ul>`,
     meta: {
       Tools: "Adobe Suite · Figma",
@@ -74,7 +74,7 @@ const D = {
     cat: "Services",
     icon: "✏️",
     title: "Logo Designing Services",
-    desc: "Flexote offers the best Logo Designing Services trends. Our designers create logos that can perfectly reflect your business identity and build lasting recognition.",
+    desc: "Flexot offers the best Logo Designing Services trends. Our designers create logos that can perfectly reflect your business identity and build lasting recognition.",
     body: `<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Your logo is the cornerstone of your brand identity. Our logo designers create unique, timeless, and versatile logos that work across all media — from business cards to billboards, digital screens to embroidery — ensuring your brand is always recognised.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Our Logo Design Process</h3><ul class="feature-list"><li>Brand discovery consultation and creative brief</li><li>Research and multiple initial concepts presented</li><li>Unlimited revisions until you are 100% satisfied</li><li>Final delivery in all formats: AI, EPS, SVG, PNG, PDF</li><li>Brand colour palette and typography guide</li><li>Social media profile kit included</li><li>Complete brand guidelines document</li></ul>`,
     meta: {
       Concepts: "3 Initial + Revisions",
@@ -102,7 +102,7 @@ const D = {
     cat: "Services",
     icon: "☁️",
     title: "Web Hosting Services",
-    desc: "Flexote provides the best Web Hosting services needed for the website to be viewed on the Internet with maximum uptime and performance.",
+    desc: "Flexot provides the best Web Hosting services needed for the website to be viewed on the Internet with maximum uptime and performance.",
     body: `<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Your website's performance starts with reliable hosting. We offer enterprise-grade hosting solutions on high-speed SSD servers in Indian data centres, ensuring your website loads fast for Indian visitors while maintaining global performance and 99.9% uptime guarantee.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Hosting Features</h3><ul class="feature-list"><li>99.9% uptime guarantee backed by SLA agreement</li><li>SSD-powered servers for fast page loading</li><li>Free SSL certificate included with all plans</li><li>Daily automated backups to secure your data</li><li>cPanel control panel for easy website management</li><li>One-click WordPress and CMS installation</li><li>DDoS protection and firewall security</li><li>24/7 technical support via phone, email and chat</li></ul>`,
     meta: {
       Uptime: "99.9% SLA Guaranteed",
@@ -144,7 +144,7 @@ const D = {
     cat: "Solutions",
     icon: "🔍",
     title: "SEO Services",
-    desc: "Flexote offers the best SEO services in Hyderabad. We make sure your website always shows up in the right place at the right time for your target customers.",
+    desc: "Flexot offers the best SEO services in Hyderabad. We make sure your website always shows up in the right place at the right time for your target customers.",
     body: `<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">Our SEO services combine technical excellence, content strategy, and authoritative link building to achieve sustainable rankings for your target keywords — ranking your website at the top of Google for searches that bring real business enquiries.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Our SEO Process</h3><ul class="feature-list"><li>Comprehensive website SEO audit and gap analysis</li><li>Keyword research and competitor keyword analysis</li><li>On-page optimisation (meta tags, headings, content)</li><li>Technical SEO (site speed, schema markup, sitemap)</li><li>Off-page SEO and high-quality link building</li><li>Local SEO and Google My Business optimisation</li><li>Monthly ranking reports and Google Analytics review</li></ul>`,
     meta: {
       Tools: "Ahrefs · SEMrush · GSC",
@@ -313,7 +313,7 @@ const D = {
     icon: "🏫",
     title: "PHP Classroom Training",
     desc: "PHP Programming course providing the knowledge to design and develop dynamic, database-driven web pages using PHP 8 with placement assistance.",
-    body: `<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">In Flexote IT Solutions, our PHP Programming course provides the knowledge necessary to design and develop dynamic, database-driven web pages using PHP 8. Our PHP Training Course with Placement assistance programme is for all who want to become expert PHP Programmers, including deeper training on PHP Frameworks.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Curriculum</h3><ul class="feature-list"><li>PHP 8 fundamentals — syntax, functions, arrays, strings</li><li>Object-Oriented Programming (OOP) in PHP</li><li>MySQL and MariaDB database design and operations</li><li>CRUD operations, prepared statements and security</li><li>Form handling, validation and file upload management</li><li>Session management, cookies and authentication</li><li>REST API development and third-party integration</li><li>Laravel framework introduction and MVC pattern</li><li>Security best practices — SQL injection, XSS prevention</li><li>Live project: complete dynamic web application</li></ul>`,
+    body: `<p style="font-size:15px;color:var(--ink2);line-height:1.85;margin-bottom:16px;">In Flexot IT Solutions, our PHP Programming course provides the knowledge necessary to design and develop dynamic, database-driven web pages using PHP 8. Our PHP Training Course with Placement assistance programme is for all who want to become expert PHP Programmers, including deeper training on PHP Frameworks.</p><h3 style="font-family:var(--fh);font-size:22px;margin:22px 0 12px;color:var(--ink);">Curriculum</h3><ul class="feature-list"><li>PHP 8 fundamentals — syntax, functions, arrays, strings</li><li>Object-Oriented Programming (OOP) in PHP</li><li>MySQL and MariaDB database design and operations</li><li>CRUD operations, prepared statements and security</li><li>Form handling, validation and file upload management</li><li>Session management, cookies and authentication</li><li>REST API development and third-party integration</li><li>Laravel framework introduction and MVC pattern</li><li>Security best practices — SQL injection, XSS prevention</li><li>Live project: complete dynamic web application</li></ul>`,
     meta: {
       Duration: "3 Months",
       Mode: "Classroom (Live)",
